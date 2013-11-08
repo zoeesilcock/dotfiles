@@ -1,0 +1,3 @@
+color molokai
+set colorcolumn=80
+let g:ackprg = 'ag --nogroup --nocolor --column'
