@@ -1,0 +1,6 @@
+[submodule "home/.janus/vim-gitgutter"]
+	path = home/.janus/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "home/.janus/vim-multiple-cursors"]
+	path = home/.janus/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
