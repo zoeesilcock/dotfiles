@@ -1,11 +1,16 @@
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
-eval "$(rbenv init -)"
 
-function solr {
-  cd ~/Projects/solr
-  ./start.sh $1
-  cd -
-}
+# MND specific stuff
+if [ -d ~/Projects/mnd ]; then
+  eval "$(rbenv init -)"
+  eval "$(~/Projects/mnd/bin/mnd init -)"
+
+  function solr {
+    cd ~/Projects/solr
+    ./start.sh $1
+    cd -
+  }
+fi
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
