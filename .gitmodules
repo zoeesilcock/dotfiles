@@ -4,3 +4,4 @@
 [submodule "home/.janus/vim-multiple-cursors"]
 	path = home/.janus/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+  ignore = dirty
