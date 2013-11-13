@@ -5,3 +5,6 @@
 	path = home/.janus/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
   ignore = dirty
+[submodule "home/.janus/ruby-matchit"]
+	path = home/.janus/ruby-matchit
+	url = https://github.com/vim-scripts/ruby-matchit.git
