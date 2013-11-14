@@ -8,3 +8,6 @@
 [submodule "home/.janus/ruby-matchit"]
 	path = home/.janus/ruby-matchit
 	url = https://github.com/vim-scripts/ruby-matchit.git
+[submodule "home/.janus/vim-airline"]
+	path = home/.janus/vim-airline
+	url = git@github.com:bling/vim-airline.git
