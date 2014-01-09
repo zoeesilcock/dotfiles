@@ -1,2 +1,3 @@
-color twilight
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg='ag --nogroup --nocolor --column'
+
+set guifont=Inconsolata:h16
