@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/share/python:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # MND specific stuff
 if [ -d ~/Projects/mnd ]; then

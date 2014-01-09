@@ -1,11 +1,14 @@
 [user]
 	name = Zoee Silcock
-	email = zoee.silcock@newsdesk.se
+	email = zoee.silcock@mynewsdesk.com
 [push]
 	default = current
 [merge]
 	ff = false
+	conflictstyle = diff3
 [branch]
 	autosetuprebase = always
 [core]
 	edit = vim
+	fileMode = false
+	editor = vim
