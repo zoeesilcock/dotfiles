@@ -10,7 +10,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ddollar/nerdcommenter'
-NeoBundle 'mileszs/ack.vim'
+NeoBundle 'teoljungberg/vim-grep'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
@@ -29,6 +29,7 @@ set mouse=a
 
 " Bindings
 let mapleader=" "
+noremap <leader>gg :Grep!<space>
 
 filetype plugin indent on
 NeoBundleCheck
