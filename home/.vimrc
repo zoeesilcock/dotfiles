@@ -22,8 +22,9 @@ NeoBundle 'groenewege/vim-less'
 color base16-tomorrow
 set background=dark
 let &t_Co=256
-set guifont=Inconsolata:h16
+set guifont=Inconsolata:h18
 
+syntax on
 set colorcolumn=80
 set mouse=a
 
