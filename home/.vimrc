@@ -38,6 +38,7 @@ augroup END
 " Bindings
 let mapleader=" "
 noremap <leader>gg :Grep!<space>
+noremap <leader>ct :!ctags -R -f ./.git/tags .<return>
 
 filetype plugin indent on
 NeoBundleCheck
