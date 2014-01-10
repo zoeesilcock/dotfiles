@@ -28,7 +28,12 @@ syntax on
 set number
 set colorcolumn=80
 set nowrap
+set hlsearch
 set mouse=a
+
+augroup vimrcEx
+  au FileType html,eruby setlocal sw=4 sts=4
+augroup END
 
 " Bindings
 let mapleader=" "
