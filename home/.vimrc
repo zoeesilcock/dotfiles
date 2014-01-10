@@ -25,7 +25,9 @@ let &t_Co=256
 set guifont=Inconsolata:h18
 
 syntax on
+set number
 set colorcolumn=80
+set nowrap
 set mouse=a
 
 " Bindings
