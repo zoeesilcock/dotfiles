@@ -13,6 +13,7 @@ NeoBundle 'ddollar/nerdcommenter'
 NeoBundle 'teoljungberg/vim-grep'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -27,9 +28,13 @@ set guifont=Inconsolata:h18
 syntax on
 set number
 set colorcolumn=80
-set nowrap
 set hlsearch
 set mouse=a
+
+set shiftwidth=2
+set softtabstop=2
+set nowrap
+set expandtab
 
 augroup vimrcEx
   au FileType html,eruby setlocal sw=4 sts=4
