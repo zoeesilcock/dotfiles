@@ -18,6 +18,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " Appearance
 color base16-tomorrow
