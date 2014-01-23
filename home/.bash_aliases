@@ -23,3 +23,4 @@ alias got='git '
 alias gut='git '
 
 alias b="bundle exec"
+alias s="spring"
