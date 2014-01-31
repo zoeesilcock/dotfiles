@@ -31,6 +31,7 @@ syntax on
 set number
 set colorcolumn=80
 set hlsearch
+set incsearch
 set mouse=a
 
 set shiftwidth=2
