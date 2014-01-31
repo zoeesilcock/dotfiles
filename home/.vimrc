@@ -5,6 +5,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Plugins
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-multiple-cursors'
