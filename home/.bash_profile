@@ -1,17 +1,5 @@
 export PATH=/usr/local/bin:$PATH
 
-# MND specific stuff
-if [ -d ~/Projects/mnd ]; then
-  eval "$(rbenv init -)"
-  eval "$(~/Projects/mnd/bin/mnd init -)"
-
-  function solr {
-    cd ~/Projects/solr
-    ./start.sh $1
-    cd -
-  }
-fi
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
@@ -28,3 +16,24 @@ if [ -f ~/.bash_prompt ]; then
   . ~/.bash_prompt
 fi
 
+# Initialize ruby environment
+if [ -d ~/.rbenv ]; then
+  eval "$(rbenv init -)"
+fi
+
+if [ -d ~/.rvm ]; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+fi
+
+# MND specific stuff
+if [ -d ~/Projects/mnd ]; then
+  eval "$(~/Projects/mnd/bin/mnd init -)"
+fi
+
+if [ -d ~/Projects/solr ]; then
+  function solr {
+    cd ~/Projects/solr
+    ./start.sh $1
+    cd -
+  }
+fi
