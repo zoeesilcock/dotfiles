@@ -21,6 +21,7 @@ NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'ervandew/supertab'
 
 " Appearance
 color base16-tomorrow
