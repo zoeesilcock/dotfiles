@@ -46,10 +46,20 @@ augroup vimrcEx
   au FileType html,eruby setlocal sw=4 sts=4
 augroup END
 
-" Bindings
+" General bindings
 let mapleader=" "
+
+" Open files in directory of current file
+cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
+map <leader>e :edit %%
+
+" Grep
 noremap <leader>gg :Grep!<space>
-noremap <leader>ct :!ctags -R -f ./.git/tags .<return>
+let g:grepprg="git grep --no-index -n"
+
+" Fugitive
+map <leader>gs :Gstatus<cr>
+map <leader>gd :Gdiff<cr>
 
 filetype plugin indent on
 NeoBundleCheck
