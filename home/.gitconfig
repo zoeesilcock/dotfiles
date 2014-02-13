@@ -13,3 +13,7 @@
 	fileMode = false
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[init]
+	templatedir = ~/.git_template
+[alias]
+	ctags = !.git/hooks/ctags
