@@ -22,6 +22,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'Chiel92/vim-autoformat'
 
 " Appearance
 color base16-tomorrow
