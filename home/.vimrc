@@ -18,11 +18,13 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'tpope/vim-jdaddy'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'kana/vim-fakeclip'
 
 " Appearance
 color base16-tomorrow
