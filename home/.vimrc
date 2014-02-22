@@ -63,5 +63,13 @@ let g:grepprg="git grep --no-index -n"
 map <leader>gs :Gstatus<cr>
 map <leader>gd :Gdiff<cr>
 
+" Splits
+set splitbelow
+set splitright
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
 filetype plugin indent on
 NeoBundleCheck
