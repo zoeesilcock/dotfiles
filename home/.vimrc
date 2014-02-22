@@ -25,6 +25,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'godlygeek/tabular'
 
 " Appearance
 color base16-tomorrow
