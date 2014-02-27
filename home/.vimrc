@@ -51,6 +51,7 @@ augroup END
 
 " General bindings
 let mapleader=" "
+map <leader>k :ccl<cr>
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
