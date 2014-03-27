@@ -26,6 +26,8 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 
 " Appearance
 color base16-tomorrow
@@ -52,6 +54,7 @@ augroup END
 " General bindings
 let mapleader=" "
 map <leader>k :ccl<cr>
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
