@@ -11,7 +11,6 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ddollar/nerdcommenter'
-NeoBundle 'teoljungberg/vim-grep'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
@@ -28,6 +27,7 @@ NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'mileszs/ack.vim'
 
 " Appearance
 color base16-tomorrow
@@ -60,9 +60,9 @@ nmap <silent> <leader>d <Plug>DashSearch
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
 map <leader>e :edit %%
 
-" Grep
-noremap <leader>gg :Grep!<space>
-let g:grepprg="git grep --no-index -n"
+" The Silver Searcher
+noremap <leader>gg :Ack!<space>
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Fugitive
 map <leader>gs :Gstatus<cr>
