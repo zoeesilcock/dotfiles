@@ -26,6 +26,7 @@ NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'edkolev/tmuxline.vim'
 
 " Appearance
 color base16-tomorrow
@@ -49,6 +50,8 @@ set expandtab
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'powerline'
 
 augroup vimrcEx
   au FileType html,eruby setlocal sw=4 sts=4
