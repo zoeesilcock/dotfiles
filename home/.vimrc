@@ -25,6 +25,7 @@ NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'bling/vim-airline'
 
 " Appearance
 color base16-tomorrow
@@ -43,6 +44,11 @@ set shiftwidth=2
 set softtabstop=2
 set nowrap
 set expandtab
+
+" Airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 augroup vimrcEx
   au FileType html,eruby setlocal sw=4 sts=4
