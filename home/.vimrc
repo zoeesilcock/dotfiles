@@ -60,6 +60,7 @@ map <leader>k :ccl<cr>
 nmap <silent> <leader>d <Plug>DashSearch
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
+nmap <leader>t :tabnew<cr>
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
