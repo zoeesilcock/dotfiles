@@ -52,6 +52,8 @@ augroup END
 let mapleader=" "
 map <leader>k :ccl<cr>
 nmap <silent> <leader>d <Plug>DashSearch
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
