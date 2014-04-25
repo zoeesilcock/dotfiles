@@ -1,6 +1,9 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Cycle through tab completions
+bind '"\t":menu-complete'
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
