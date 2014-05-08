@@ -76,6 +76,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " Fugitive
 map <leader>gs :Gstatus<cr>
 map <leader>gd :Gdiff<cr>
+map <leader>gb :Gblame<cr>
 
 " Splits
 set splitbelow
