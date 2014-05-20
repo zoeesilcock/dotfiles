@@ -27,6 +27,7 @@ NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'tmhedberg/matchit'
 
 " Appearance
 color base16-tomorrow
