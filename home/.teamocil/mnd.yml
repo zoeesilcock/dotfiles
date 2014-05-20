@@ -1,0 +1,11 @@
+windows:
+  - name: "mnd"
+    root: "~/Projects/mynewsdesk"
+    layout: even-horizontal
+    panes:
+      - cmd: "rails c"
+      - cmd: "echo 'dont forget the tests'"
+  - name: "mnd vim"
+    root: "~/Projects/mynewsdesk"
+    panes:
+      - cmd: "vim ."
