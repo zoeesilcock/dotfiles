@@ -47,6 +47,8 @@ set softtabstop=2
 set nowrap
 set expandtab
 
+set clipboard=unnamed
+
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
