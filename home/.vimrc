@@ -68,6 +68,7 @@ nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>t :tabnew<cr>
 nmap <leader>n :noh<cr>
+nmap <leader>s :so $MYVIMRC<cr>
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
