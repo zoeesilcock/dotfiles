@@ -96,5 +96,7 @@ augroup filetype_vim
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/]test\/dummy$' }
+
 filetype plugin indent on
 NeoBundleCheck
