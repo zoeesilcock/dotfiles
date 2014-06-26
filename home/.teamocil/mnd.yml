@@ -1,11 +1,17 @@
-windows:
-  - name: "mnd"
-    root: "~/Projects/mynewsdesk"
-    layout: even-horizontal
-    panes:
-      - cmd: "rails c"
-      - cmd: "echo 'dont forget the tests'"
-  - name: "mnd vim"
-    root: "~/Projects/mynewsdesk"
-    panes:
-      - cmd: "vim ."
+session:
+  name: "main"
+  windows:
+    - name: "mnd"
+      root: "~/Projects/mynewsdesk"
+      layout: even-horizontal
+      panes:
+        - cmd: "vim ."
+        - cmd: "git status"
+    - name: "mnd"
+      root: "~/Projects/mynewsdesk"
+      layout: main-vertical
+      panes:
+        - cmd:
+          - "bundle exec rake jobs:clear jobs:work"
+        - cmd: "solr"
+        - cmd: "solr test"
