@@ -28,6 +28,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
 " Appearance
 color base16-tomorrow
