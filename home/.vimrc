@@ -29,6 +29,7 @@ NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'JazzCore/ctrlp-cmatcher'
 
 " Appearance
 color base16-tomorrow
@@ -84,6 +85,10 @@ map <leader>gs :Gstatus<cr>
 map <leader>gd :Gdiff<cr>
 map <leader>gb :Gblame<cr>
 
+" Ctrl-P
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/](test\/dummy|tmp|node_modules|vendor)$' }
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
 " Splits
 set splitbelow
 set splitright
@@ -103,8 +108,6 @@ autocmd FileType ruby
   \ else |
   \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
   \ endif
-
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/]test\/dummy$' }
 
 filetype plugin indent on
 NeoBundleCheck
