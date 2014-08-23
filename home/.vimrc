@@ -1,6 +1,7 @@
 " Init NeoBundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#rc(expand('~/.vim/bundle/'))
+filetype plugin indent on
 
 " Plugins
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -30,6 +31,9 @@ NeoBundle 'tmhedberg/matchit'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'JazzCore/ctrlp-cmatcher'
+
+call neobundle#end()
+NeoBundleCheck
 
 " Appearance
 color base16-tomorrow
@@ -62,10 +66,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme = 'powerline'
-
-augroup vimrcEx
-  au FileType html,eruby setlocal sw=4 sts=4
-augroup END
 
 " General bindings
 let mapleader=" "
@@ -102,6 +102,11 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" File type specific stuff
+augroup vimrcEx
+  au FileType html,eruby setlocal sw=4 sts=4
+augroup END
+
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
@@ -113,6 +118,3 @@ autocmd FileType ruby
   \ else |
   \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
   \ endif
-
-filetype plugin indent on
-NeoBundleCheck
