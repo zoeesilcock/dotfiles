@@ -22,3 +22,5 @@
 [merge "gemfilelock"]
 	name = relocks the gemfile.lock
 	driver = bundle install
+[rerere]
+	enabled = true
