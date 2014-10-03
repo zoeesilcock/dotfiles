@@ -118,3 +118,5 @@ autocmd FileType ruby
   \ else |
   \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
   \ endif
+
+au BufRead,BufNewFile *.coffee set filetype=coffee
