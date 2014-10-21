@@ -1,17 +1,20 @@
-session:
-  name: "main"
-  windows:
-    - name: "mnd"
-      root: "~/Projects/mynewsdesk"
-      layout: even-horizontal
-      panes:
-        - cmd: "vim ."
-        - cmd: "git status"
-    - name: "mnd"
-      root: "~/Projects/mynewsdesk"
-      layout: main-vertical
-      panes:
-        - cmd:
-          - "bundle exec rake jobs:clear jobs:work"
-        - cmd: "solr"
-        - cmd: "solr test"
+name: "main"
+windows:
+  - name: "jobs"
+    root: "~/Projects/mynewsdesk"
+    layout: main-vertical
+    panes:
+      - commands:
+        - "bundle exec rake jobs:clear jobs:work"
+      - commands:
+        - "solr"
+      - commands:
+        - "solr test"
+  - name: "mnd"
+    root: "~/Projects/mynewsdesk"
+    layout: even-horizontal
+    panes:
+      - commands:
+        - "vim ."
+      - commands:
+        - "git status"
