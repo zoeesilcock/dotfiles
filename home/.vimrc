@@ -42,6 +42,7 @@ let &t_Co=256
 set guifont=Inconsolata:h18
 
 syntax on
+set number
 set colorcolumn=80
 set hlsearch
 set incsearch
@@ -53,12 +54,6 @@ set nowrap
 set expandtab
 
 set clipboard=unnamed
-
-" Hybrid line number mode in normal mode
-set number
-set relativenumber
-autocmd InsertEnter * silent! :set norelativenumber
-autocmd InsertLeave,BufNewFile,VimEnter * silent! :set relativenumber
 
 " Airline
 set laststatus=2
