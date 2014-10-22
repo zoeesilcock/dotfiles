@@ -55,6 +55,8 @@ set expandtab
 
 set clipboard=unnamed
 
+set diffopt=vertical
+
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
