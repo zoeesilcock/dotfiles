@@ -7,9 +7,7 @@ windows:
       - commands:
         - "bundle exec rake jobs:clear jobs:work"
       - commands:
-        - "solr"
-      - commands:
-        - "solr test"
+        - "bundle exec rake sunspot:solr:start"
   - name: "mnd"
     root: "~/Projects/mynewsdesk"
     layout: even-horizontal
