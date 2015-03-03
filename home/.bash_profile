@@ -38,6 +38,10 @@ if [ -d ~/Projects/mnd ]; then
   eval "$(~/Projects/mnd/bin/mnd init -)"
 fi
 
+if [ -d ~/Projects/mndx-dev ]; then
+  export PATH="~/Projects/mndx-dev/bin:$PATH"
+fi
+
 if [ -d ~/Projects/solr ]; then
   function solr {
     cd ~/Projects/solr
