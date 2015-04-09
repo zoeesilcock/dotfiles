@@ -1,3 +1,5 @@
+set shell=/bin/bash
+
 " Init NeoBundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -30,6 +32,7 @@ NeoBundle 'tmhedberg/matchit'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'JazzCore/ctrlp-cmatcher'
+NeoBundle 'dag/vim-fish'
 
 call neobundle#end()
 filetype plugin indent on
