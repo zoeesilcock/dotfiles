@@ -2,7 +2,7 @@ alias ls="ls -la"
 alias cd..="cd .."
 
 alias cddev="cd ~/Dropbox/dev"
-alias sshz="ssh root@zoeetrope.com"
+alias sshz="ssh zoee@zoeetrope.com"
 
 # Git
 alias gs="git status "

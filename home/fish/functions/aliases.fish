@@ -1,6 +1,6 @@
 alias ls "ls -Gla"
 alias cddev "cd ~/Dropbox/dev"
-alias sshz "ssh root@zoeetrope.com"
+alias sshz "ssh zoee@zoeetrope.com"
 
 alias gs "git status "
 alias ga "git add "
