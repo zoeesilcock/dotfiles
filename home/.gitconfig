@@ -22,6 +22,13 @@
 	personal = config user.email \"mrzoee@gmail.com\"
 	work = config user.email \"zoee.silcock@mynewsdesk.com\"
 	reset-hooks = !rm .git/hooks/* & git init
+	a = add
+	co = checkout
+	br = branch
+	c = commit
+	s = status
+	r = rebase -i
+	pr = pull --rebase
 [merge "gemfilelock"]
 	name = relocks the gemfile.lock
 	driver = bundle install
