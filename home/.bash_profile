@@ -4,15 +4,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Cycle through tab completions
 bind '"\t":menu-complete'
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
