@@ -1,6 +1,6 @@
 set fish_greeting
 
-set --universal fish_user_paths "/user/local/bin" "/usr/local/heroku/bin" $fish_user_paths
+set --universal fish_user_paths "/usr/local/bin" "/usr/local/heroku/bin" $fish_user_paths
 
 set -xg EDITOR vim
 set -xg RBENV_ROOT /usr/local/var/rbenv
