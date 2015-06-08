@@ -11,3 +11,6 @@
 [submodule "home/.janus/vim-airline"]
 	path = home/.janus/vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "home/.zprezto"]
+	path = home/.zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
