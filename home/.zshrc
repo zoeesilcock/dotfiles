@@ -10,6 +10,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source zsh-git-prompt
+source ~/dotfiles/home/zsh-git-prompt/zshrc.sh
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[green]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{*%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{x%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}%{+%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{=%G%}"
+PROMPT='%* %{$fg[green]%}%~%b%{$reset_color%} $(git_super_status) $ '
+
 # Customize to your needs...
 eval "$(rbenv init -)"
 

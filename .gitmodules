@@ -1,3 +1,6 @@
 [submodule "home/.zprezto"]
 	path = home/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "home/zsh-git-prompt"]
+	path = home/zsh-git-prompt
+	url = git@github.com:olivierverdier/zsh-git-prompt.git
