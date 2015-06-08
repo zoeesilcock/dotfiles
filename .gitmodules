@@ -1,16 +1,3 @@
-[submodule "home/.janus/vim-gitgutter"]
-	path = home/.janus/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "home/.janus/vim-multiple-cursors"]
-	path = home/.janus/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-  ignore = dirty
-[submodule "home/.janus/ruby-matchit"]
-	path = home/.janus/ruby-matchit
-	url = https://github.com/vim-scripts/ruby-matchit.git
-[submodule "home/.janus/vim-airline"]
-	path = home/.janus/vim-airline
-	url = git@github.com:bling/vim-airline.git
 [submodule "home/.zprezto"]
 	path = home/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
