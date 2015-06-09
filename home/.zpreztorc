@@ -34,7 +34,9 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'tmux' \
-  'ruby'
+  'ruby' \
+  'history' \
+  'history-substring-search'
 
 #
 # Editor
