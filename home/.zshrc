@@ -44,3 +44,4 @@ alias gut="git "
 
 alias b="bundle exec"
 alias brake="bundle exec rake"
+alias respec="bundle exec rspec -f d"

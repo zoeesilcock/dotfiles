@@ -16,3 +16,19 @@ windows:
         - "vim ."
       - commands:
         - "git status"
+  - name: "web"
+    root: "~/Projects/mndx-web"
+    layout: even-horizontal
+    panes:
+      - commands:
+        - "vim ."
+      - commands:
+        - "git status"
+  - name: "users"
+    root: "~/Projects/mndx-users"
+    layout: even-horizontal
+    panes:
+      - commands:
+        - "vim ."
+      - commands:
+        - "git status"
