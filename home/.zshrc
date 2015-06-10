@@ -45,3 +45,16 @@ alias gut="git "
 alias b="bundle exec"
 alias brake="bundle exec rake"
 alias respec="bundle exec rspec -f d"
+
+# Settings for vi mode
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+export VISUAL=vim
+export EDITOR=vim
+export KEYTIMEOUT=1
