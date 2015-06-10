@@ -35,3 +35,8 @@ if [ ! -L "$HOME/.config/fish" ]; then
   echo "linking fish $(pwd)/home/fish" "$HOME/.config/fish"
   symlink "$(pwd)/home/fish" "$HOME/.config/fish"
 fi
+
+if [ -d "$HOME/.zprezto" ]; then
+  echo "linking the zsh prompt theme"
+  symlink "$(pwd)/home/prompt_zoee_setup" "$HOME/.zprezto/modules/prompt/functions/prompt_zoee_setup"
+fi
