@@ -9,6 +9,10 @@ for file in home/.[^.]*; do
   base=$(basename $file)
   target="$HOME/$base"
 
+  if [[ $path == *".swp"* ]]; then
+    continue
+  fi
+
   if [[ -h $target && ($(readlink $target) == $path)]]; then
     echo "~/$base is symlinked to $path"
   elif [[ -f $target && $(md5 $path) == $(md5 $target) ]]; then
