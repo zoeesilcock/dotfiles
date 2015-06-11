@@ -33,6 +33,8 @@ NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'dag/vim-fish'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 filetype plugin indent on
@@ -93,6 +95,14 @@ map <leader>gb :Gblame<cr>
 " Ctrl-P
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/](test\/dummy|tmp|node_modules|vendor|public|bower_components)$' }
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
+" Indent guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=237
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=236
 
 " Splits
 set splitbelow
