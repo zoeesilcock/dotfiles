@@ -21,6 +21,13 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{=%G%}"
 # Customize to your needs...
 eval "$(rbenv init -)"
 
+export NVM_DIR="/Users/zoee/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export VISUAL=vim
+export EDITOR=vim
+export KEYTIMEOUT=1
+
 # Aliases
 alias ls="ls -Gla"
 alias cddev="cd ~/Dropbox/dev"
@@ -53,7 +60,3 @@ bindkey '^N' down-history
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
-
-export VISUAL=vim
-export EDITOR=vim
-export KEYTIMEOUT=1

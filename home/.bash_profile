@@ -33,6 +33,9 @@ if [ -d ~/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
 
+export NVM_DIR="/Users/zoee/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # MND specific stuff
 if [ -d ~/Projects/mnd ]; then
   eval "$(~/Projects/mnd/bin/mnd init -)"
