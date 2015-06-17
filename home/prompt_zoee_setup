@@ -10,7 +10,7 @@ function prompt_zoee_setup {
   autoload -Uz add-zsh-hook
   add-zsh-hook precmd prompt_zoee_precmd
 
-  PROMPT='%* %{$fg[green]%}%~%b%{$reset_color%} $(git_super_status) $ '
+  PROMPT='%* %{$fg[green]%}%~%b%{$reset_color%}$(git_super_status) $ '
   RPROMPT='${${KEYMAP/vicmd/$_prompt_zoee_vi}/(main|viins)/}'
 }
 
