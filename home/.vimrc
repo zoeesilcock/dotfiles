@@ -1,4 +1,5 @@
 set shell=/bin/bash
+let os = substitute(system('uname'), "\n", "", "")
 
 " Init NeoBundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -45,6 +46,12 @@ color base16-tomorrow
 set background=dark
 let &t_Co=256
 set guifont=Inconsolata:h18
+
+if os == 'Darwin' || os == 'Mac'
+  let base16colorspace=16
+else
+  let base16colorspace=256
+endif
 
 syntax on
 set number

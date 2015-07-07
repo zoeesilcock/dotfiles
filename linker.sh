@@ -44,3 +44,13 @@ if [ -d "$HOME/.zprezto" ]; then
   echo "linking the zsh prompt theme"
   symlink "$(pwd)/home/prompt_zoee_setup" "$HOME/.zprezto/modules/prompt/functions/prompt_zoee_setup"
 fi
+
+if [ ! -L "$HOME/.config/base16-shell" ]; then
+  if [ -d "$HOME/.config/base16-shell" ]; then
+    rm -rf "$HOME/.config/base16-shell"
+  fi
+  mkdir -p "$HOME/.config"
+
+  echo "linking base16-shell"
+  symlink "$(pwd)/home/base16-shell" "$HOME/.config/base16-shell"
+fi
