@@ -60,6 +60,8 @@ alias b="bundle exec"
 alias brake="bundle exec rake"
 alias respec="bundle exec rspec -f d"
 
+alias runtouch="ubuntu-html5-app-launcher --www=www --inspector"
+
 # Settings for vi mode
 bindkey -v
 
