@@ -36,6 +36,8 @@ NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'dag/vim-fish'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'OmniSharp/omnisharp-vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -118,6 +120,55 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Omnisharp
+set completeopt=longest,menuone,preview
+
+augroup omnisharp_commands
+  autocmd!
+
+  " Set autocomplete function to OmniSharp
+  autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+
+  " Automatic syntax check on events
+  autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+
+  " Show type information automatically when the cursor stops moving
+  autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
+  " The following commands are contextual, based on the current cursor position
+  autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
+  autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
+  autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
+  autocmd FileType cs nnoremap <leader>fs :OmniSharpFindSymbol<cr>
+  autocmd FileType cs nnoremap <leader>fu :OmniSharpFindUsages<cr>
+  " Finds members in the current buffer
+  autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
+  " Cursor can be anywhere on the line containing an issue
+  autocmd FileType cs nnoremap <leader>x  :OmniSharpFixIssue<cr>
+  autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
+  autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+  autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
+  " Navigate up by method/property/field
+  autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
+  " Navigate down by method/property/field
+  autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
+augroup END
+
+" Contextual code actions (requires CtrlP or unite.vim)
+nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
+" Run code actions with text selected in visual mode to extract method
+vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
+
+" Rename with dialog
+nnoremap <leader>nm :OmniSharpRename<cr>
+nnoremap <F2> :OmniSharpRename<cr>
+
+" Rename without dialog - with cursor on the symbol to rename... ':Rename newname'
+command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+
+" Syntastic
+let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
 " File type specific stuff
 augroup vimrcEx
