@@ -17,3 +17,7 @@ Delete line without newline
 Convert JavaScript import to CoffeeScript
 =========================================
 0v$hS`$hx
+
+Empty the value of a line in yaml
+=================================
+0f"ldi"j
