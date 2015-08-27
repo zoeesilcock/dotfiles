@@ -4,6 +4,7 @@ let os = substitute(system('uname'), "\n", "", "")
 " Init NeoBundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
+let g:neobundle#install_process_timeout = 1500
 
 " Plugins
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -24,7 +25,6 @@ NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'ervandew/supertab'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
@@ -38,7 +38,14 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'OmniSharp/omnisharp-vim'
-
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build'      : {
+        \ 'mac'     : './install.py --clang-completer --system-libclang --omnisharp-completer',
+        \ 'unix'    : './install.py --clang-completer --system-libclang --omnisharp-completer',
+        \ 'windows' : './install.py --clang-completer --system-libclang --omnisharp-completer',
+        \ 'cygwin'  : './install.py --clang-completer --system-libclang --omnisharp-completer'
+        \ }
+     \ }
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
