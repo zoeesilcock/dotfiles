@@ -176,10 +176,6 @@ augroup omnisharp_commands
   autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
   autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
   autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
-  " Navigate up by method/property/field
-  autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
-  " Navigate down by method/property/field
-  autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
 augroup END
 
 " Contextual code actions (requires CtrlP or unite.vim)
@@ -191,8 +187,11 @@ vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
 nnoremap <leader>nm :OmniSharpRename<cr>
 nnoremap <F2> :OmniSharpRename<cr>
 
-" Rename without dialog - with cursor on the symbol to rename... ':Rename newname'
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+" Force OmniSharp to reload the solution. Useful when switching branches etc.
+nnoremap <leader>rl :OmniSharpReloadSolution<cr>
+nnoremap <leader>cf :OmniSharpCodeFormat<cr>
+" Load the current .cs file to the nearest project
+nnoremap <leader>tp :OmniSharpAddToProject<cr>
 
 " Syntastic
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
