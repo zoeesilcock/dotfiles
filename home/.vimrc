@@ -144,6 +144,10 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+" Vinegar
+map <c-_> :Tex<cr>
+noremap _ :Vex<cr>
+
 " Omnisharp
 set completeopt=longest,menuone,preview
 
