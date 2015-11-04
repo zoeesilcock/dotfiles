@@ -18,22 +18,16 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-rake'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'tmhedberg/matchit'
-NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'JazzCore/ctrlp-cmatcher'
-NeoBundle 'dag/vim-fish'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/syntastic'
@@ -84,8 +78,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme = 'powerline'
 
 " General bindings
 let mapleader=" "
