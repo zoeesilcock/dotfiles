@@ -142,3 +142,6 @@ noremap _ :Vex<cr>
 
 " Syntastic
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+
+" Make readable JSON
+:command PrettyJson %!python -m json.tool
