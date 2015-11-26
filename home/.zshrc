@@ -40,6 +40,7 @@ export KEYTIMEOUT=1
 alias ls="ls -Gla"
 alias cddev="cd ~/Dropbox/dev"
 alias sshz="ssh zoee@zoeetrope.com"
+alias rmcc="find . -name \*\'s\ conflicted\ copy\ \* -exec mv -v {} ~/.Trash/ \;"
 
 alias gs="git status "
 alias ga="git add "
