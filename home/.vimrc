@@ -31,6 +31,7 @@ NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'skwp/greplace.vim'
 NeoBundle 'OmniSharp/omnisharp-vim'
 NeoBundle 'Valloric/YouCompleteMe', {
      \ 'build'      : {
@@ -142,6 +143,10 @@ noremap _ :Vex<cr>
 
 " Syntastic
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+
+" greplace.vim
+set grepprg=ack
+let g:grep_cmd_opts = '--noheading'
 
 " Make readable JSON
 :command PrettyJson %!python -m json.tool
