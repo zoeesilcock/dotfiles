@@ -13,6 +13,10 @@ for file in home/.[^.]*; do
     continue
   fi
 
+  if [[ $path == *".config"* ]]; then
+    continue
+  fi
+
   if [[ -h $target && ($(readlink $target) == $path)]]; then
     echo "~/$base is symlinked to $path"
   elif [[ -f $target && $(md5 $path) == $(md5 $target) ]]; then
@@ -38,6 +42,16 @@ if [ ! -L "$HOME/.config/fish" ]; then
 
   echo "linking fish $(pwd)/home/fish" "$HOME/.config/fish"
   symlink "$(pwd)/home/fish" "$HOME/.config/fish"
+fi
+
+if [ ! -L "$HOME/.config/nvim" ]; then
+  if [ -d "$HOME/.config/nvim" ]; then
+    rm -rf "$HOME/.config/nvim"
+  fi
+  mkdir -p "$HOME/.config"
+
+  echo "linking nvim $(pwd)/home/nvim" "$HOME/.config/nvim"
+  symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 fi
 
 if [ -d "$HOME/.zprezto" ]; then
