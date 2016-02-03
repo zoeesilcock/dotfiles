@@ -34,16 +34,6 @@ for file in home/.[^.]*; do
   fi
 done
 
-if [ ! -L "$HOME/.config/fish" ]; then
-  if [ -d "$HOME/.config/fish" ]; then
-    rm -rf "$HOME/.config/fish"
-  fi
-  mkdir -p "$HOME/.config"
-
-  echo "linking fish $(pwd)/home/fish" "$HOME/.config/fish"
-  symlink "$(pwd)/home/fish" "$HOME/.config/fish"
-fi
-
 if [ ! -L "$HOME/.config/nvim" ]; then
   if [ -d "$HOME/.config/nvim" ]; then
     rm -rf "$HOME/.config/nvim"
