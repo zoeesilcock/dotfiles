@@ -43,6 +43,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
         \ }
      \ }
 NeoBundle '/Users/zoee/Dropbox/dev/vim/vim-goto-import', { 'type' : 'nosync' }
+NeoBundle '/Users/zoee/Dropbox/dev/vim/vim-css-editor', { 'type' : 'nosync' }
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -123,7 +124,7 @@ set splitright
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
-map <c-h> <c-w>h
+map <BS> <c-w>h
 noremap <c-w>z <c-w>\| <c-w>_
 
 " Tabs
