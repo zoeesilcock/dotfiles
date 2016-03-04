@@ -1,4 +1,4 @@
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
 
 augroup omnisharp_commands
   autocmd!
