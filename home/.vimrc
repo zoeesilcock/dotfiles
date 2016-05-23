@@ -41,6 +41,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
         \ 'cygwin'  : './install.py --clang-completer --system-libclang --omnisharp-completer'
         \ }
      \ }
+NeoBundle 'junegunn/goyo.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -150,3 +151,19 @@ let g:grep_cmd_opts = '--noheading'
 
 " Make readable JSON
 :command PrettyJson %!python -m json.tool
+
+" Goyo
+function! s:goyo_enter()
+  set wrap
+  set linebreak
+  silent !tmux set status off
+endfunction
+
+function! s:goyo_leave()
+  set nowrap
+  set nolinebreak
+  silent !tmux set status on
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
