@@ -45,6 +45,9 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   /usr/local/heroku/bin
+  ~/Developer/depot_tools
+  ~/Library/Android/sdk/tools
+  ~/Library/Android/sdk/platform-tools
   $path
 )
 
