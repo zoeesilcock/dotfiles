@@ -156,12 +156,14 @@ let g:grep_cmd_opts = '--noheading'
 function! s:goyo_enter()
   set wrap
   set linebreak
+  setlocal spell spelllang=en_us
   silent !tmux set status off
 endfunction
 
 function! s:goyo_leave()
   set nowrap
   set nolinebreak
+  setlocal nospell
   silent !tmux set status on
 endfunction
 
