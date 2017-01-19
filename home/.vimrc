@@ -1,41 +1,35 @@
 set shell=/bin/bash
 let os = substitute(system('uname'), "\n", "", "")
 
-" Init NeoBundle
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
-let g:neobundle#install_process_timeout = 1500
+call plug#begin('~/.vim/plugged')
 
-" Plugins
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'tpope/vim-bundler'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-sleuth'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'JazzCore/ctrlp-cmatcher'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'skwp/greplace.vim'
-NeoBundle 'OmniSharp/omnisharp-vim'
-NeoBundle 'Valloric/YouCompleteMe', {
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'chriskempson/base16-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
+Plug 'kchmck/vim-coffee-script'
+Plug 'Chiel92/vim-autoformat'
+Plug 'mileszs/ack.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'JazzCore/ctrlp-cmatcher'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/syntastic'
+Plug 'skwp/greplace.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'Valloric/YouCompleteMe', {
      \ 'build'      : {
         \ 'mac'     : './install.py --clang-completer --system-libclang --omnisharp-completer',
         \ 'unix'    : './install.py --clang-completer --system-libclang --omnisharp-completer',
@@ -43,10 +37,9 @@ NeoBundle 'Valloric/YouCompleteMe', {
         \ 'cygwin'  : './install.py --clang-completer --system-libclang --omnisharp-completer'
         \ }
      \ }
-NeoBundle 'junegunn/goyo.vim'
-call neobundle#end()
-filetype plugin indent on
-NeoBundleCheck
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
 
 " Appearance
 color base16-tomorrow

@@ -1,4 +1,4 @@
-home/.vim/bundle
+home/.vim/plugged
 home/fish/fish_history
 home/fish/fishd*
 home/fish/generated_completions
