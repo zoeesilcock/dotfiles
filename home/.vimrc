@@ -25,7 +25,9 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'JazzCore/ctrlp-cmatcher'
 NeoBundle 'editorconfig/editorconfig-vim'
@@ -80,6 +82,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='base16_tomorrow'
 
 " General bindings
 let mapleader=" "
