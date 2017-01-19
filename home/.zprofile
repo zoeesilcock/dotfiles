@@ -45,8 +45,6 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   /usr/local/heroku/bin
-  ~/Projects/mndx-dev/bin
-  ~/Projects/mnd/bin
   $path
 )
 
