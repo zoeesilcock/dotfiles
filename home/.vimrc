@@ -46,12 +46,7 @@ color base16-tomorrow
 set background=dark
 let &t_Co=256
 set guifont=Inconsolata:h18
-
-if os == 'Darwin' || os == 'Mac'
-  let base16colorspace=16
-else
-  let base16colorspace=256
-endif
+let base16colorspace=256
 
 syntax on
 set number
