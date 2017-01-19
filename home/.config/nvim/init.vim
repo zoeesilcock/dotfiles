@@ -37,6 +37,7 @@ Plug 'Valloric/YouCompleteMe', {
         \ 'cygwin'  : './install.py --clang-completer --system-libclang --omnisharp-completer'
         \ }
      \ }
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -74,6 +75,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='base16_tomorrow'
 
 " General bindings
 let mapleader=" "
@@ -146,3 +148,23 @@ let g:grep_cmd_opts = '--noheading'
 
 " Make readable JSON
 :command PrettyJson %!python -m json.tool
+
+" Goyo
+function! s:goyo_enter()
+  set wrap
+  set linebreak
+  setlocal spell spelllang=en_us
+  silent !tmux set status off
+endfunction
+
+function! s:goyo_leave()
+  set nowrap
+  set nolinebreak
+  setlocal nospell
+  silent !tmux set status on
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+xnoremap p "_dP
