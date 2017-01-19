@@ -23,10 +23,7 @@ if type "rbenv" > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
-BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-tomorrow-night.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export NVM_DIR="/Users/zoee/.nvm"
