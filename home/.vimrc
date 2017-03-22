@@ -81,6 +81,7 @@ nmap <leader>q :q<cr>
 nmap <leader>t :tabnew<cr>
 nmap <leader>n :noh<cr>
 nmap <leader>s :so $MYVIMRC<cr>
+xnoremap p "_dP
 
 " Open files in directory of current file
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
@@ -161,4 +162,5 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-xnoremap p "_dP
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
