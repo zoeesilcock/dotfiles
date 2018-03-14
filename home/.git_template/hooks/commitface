@@ -1,9 +1,16 @@
 #!/usr/bin/env ruby
 
-file = "~/Dropbox/commitfaces/#{Time.now.strftime("%Y-%m-%d_%H%M%S")}.jpg"
-
 unless File.directory? File.expand_path("../../rebase-merge", __FILE__)
-  system "imagesnap -q -w 1 #{file} &"
+  camera = ""
+  cameraList = `imagesnap -l`.split("\n")
+  cameraIndex = cameraList.index{|c| c.include?("C920")}
+
+  if cameraIndex > -1
+    camera = "-d \"#{cameraList[cameraIndex]}\""
+  end
+
+  file = "~/Dropbox/commitfaces/#{Time.now.strftime("%Y-%m-%d_%H%M%S")}.jpg"
+  system "imagesnap -q #{camera} -w 1 #{file} &"
 end
 
 exit 0
