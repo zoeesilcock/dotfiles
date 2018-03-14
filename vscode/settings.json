@@ -1,0 +1,35 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "workbench.colorTheme": "Base16 Tomorrow Dark",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules/": true
+    },
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.blame.line.enabled": false,
+    //"editor.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    //"terminal.integrated.fontFamily": "Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 14,
+    "php.executablePath": "/usr/local/bin/php",
+    "[markdown]": {
+        "editor.rulers": [
+            80
+        ]
+    },
+    "editor.codeLens": false,
+    "workbench.editor.enablePreview": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.keymap": "alternate"
+}
