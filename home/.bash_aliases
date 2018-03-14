@@ -2,6 +2,7 @@ alias ls="ls -la"
 alias cd..="cd .."
 
 alias cddev="cd ~/Dropbox/dev"
+alias cdrp="cd ~/Dropbox/0RocketPantsTech"
 alias sshz="ssh zoee@zoeetrope.com"
 
 # Git

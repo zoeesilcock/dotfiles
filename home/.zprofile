@@ -48,6 +48,7 @@ path=(
   ~/Developer/depot_tools
   ~/Library/Android/sdk/tools
   ~/Library/Android/sdk/platform-tools
+  /Applications/Aseprite.app/Contents/MacOS
   $path
 )
 

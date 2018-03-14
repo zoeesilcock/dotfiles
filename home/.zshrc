@@ -28,6 +28,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-tomorrow-night.sh"
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export PATH="$HOME/.fastlane/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export NVM_DIR="/Users/zoee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
@@ -38,6 +40,7 @@ export KEYTIMEOUT=1
 # Aliases
 alias ls="ls -Gla"
 alias cddev="cd ~/Dropbox/dev"
+alias cdrp="cd ~/Dropbox/0RocketPantsTech"
 alias sshz="ssh zoee@zoeetrope.com"
 alias rmcc="find . -name \*\'s\ conflicted\ copy\ \* -exec mv -v {} ~/.Trash/ \;"
 

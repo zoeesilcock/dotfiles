@@ -1,5 +1,6 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/applications/Aseprite.app/Contents/MacOS:$PATH"
 
 # Cycle through tab completions
 bind '"\t":menu-complete'
