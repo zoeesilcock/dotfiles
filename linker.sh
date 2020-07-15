@@ -4,6 +4,14 @@ function symlink {
   ln -nsf $1 $2
 }
 
+function md5_command {
+  if [[! command -v md5 &> /dev/null]]; then
+    md5 $1
+  elif [[! command -v md5 &> /dev/null]]; then
+    md5sum $1
+  fi
+}
+
 for file in home/.[^.]*; do
   path="$(pwd)/$file"
   base=$(basename $file)
@@ -19,7 +27,7 @@ for file in home/.[^.]*; do
 
   if [[ -h $target && ($(readlink $target) == $path)]]; then
     echo "~/$base is symlinked to $path"
-  elif [[ -f $target && $(md5 $path) == $(md5 $target) ]]; then
+  elif [[ -f $target && $(md5_command $path) == $(md5_command $target) ]]; then
     echo "~/$base exists and is identical. Overriding"
     symlink $path $target
   elif [[ -a $target ]]; then
