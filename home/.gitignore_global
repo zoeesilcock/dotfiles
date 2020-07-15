@@ -3,8 +3,4 @@
 *.swo
 .DS_Store
 .DS_Store?
-/tags
 .netrwhist
-.env
-/node_modules
-/bower_components

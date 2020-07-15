@@ -34,21 +34,6 @@ for file in home/.[^.]*; do
   fi
 done
 
-if [ ! -L "$HOME/.config/nvim" ]; then
-  if [ -d "$HOME/.config/nvim" ]; then
-    rm -rf "$HOME/.config/nvim"
-  fi
-  mkdir -p "$HOME/.config"
-
-  echo "linking nvim $(pwd)/home/nvim" "$HOME/.config/nvim"
-  symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
-fi
-
-if [ -d "$HOME/.zprezto" ]; then
-  echo "linking the zsh prompt theme"
-  symlink "$(pwd)/home/prompt_zoee_setup" "$HOME/.zprezto/modules/prompt/functions/prompt_zoee_setup"
-fi
-
 if [ ! -L "$HOME/.config/base16-shell" ]; then
   if [ -d "$HOME/.config/base16-shell" ]; then
     rm -rf "$HOME/.config/base16-shell"

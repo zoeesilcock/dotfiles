@@ -1,30 +1,3 @@
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/applications/Aseprite.app/Contents/MacOS:$PATH"
-
-# Cycle through tab completions
-bind '"\t":menu-complete'
-
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-  . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
-fi
-
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-
-if [ -f ~/.bash_prompt ]; then
-  . ~/.bash_prompt
-fi
-
 # Initialize ruby environment
 if [ -d ~/.rbenv ]; then
   eval "$(rbenv init -)"
@@ -34,22 +7,8 @@ if [ -d ~/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
 
-export NVM_DIR="/Users/zoee/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# MND specific stuff
-if [ -d ~/Projects/mnd ]; then
-  eval "$(~/Projects/mnd/bin/mnd init -)"
-fi
-
-if [ -d ~/Projects/mndx-dev ]; then
-  export PATH="~/Projects/mndx-dev/bin:$PATH"
-fi
-
-if [ -d ~/Projects/solr ]; then
-  function solr {
-    cd ~/Projects/solr
-    ./start.sh $1
-    cd -
-  }
+# Initialize node version manager
+if [ -d ~/.nvm ]; then
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 fi
