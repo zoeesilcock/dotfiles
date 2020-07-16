@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dotfiles-test-machine
+spec:
+  containers:
+  - name: dotfiles-test-machine
+    image: dotfiles-test-machine

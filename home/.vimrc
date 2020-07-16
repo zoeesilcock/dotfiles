@@ -27,7 +27,7 @@ endtry
 
 set background=dark
 let &t_Co=256
-set guifont=Inconsolata:h18
+set guifont=FiraMono:h18
 
 syntax on
 set number

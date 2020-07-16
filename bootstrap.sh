@@ -1,13 +1,17 @@
 #!/bin/bash
 
+echo "Installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 function symlink {
   ln -nsf $1 $2
 }
 
 function md5_command {
-  if [[! command -v md5 &> /dev/null]]; then
+  if hash md5 2>/dev/null; then
     md5 $1
-  elif [[! command -v md5 &> /dev/null]]; then
+  elif hash md5sum 2>/dev/null; then
     md5sum $1
   fi
 }
@@ -50,4 +54,8 @@ if [ ! -L "$HOME/.config/base16-shell" ]; then
 
   echo "linking base16-shell"
   symlink "$(pwd)/home/base16-shell" "$HOME/.config/base16-shell"
+  symlink "$HOME/.config/base16-shell/scripts/base16-tomorrow-night.sh" "$HOME/.base16_theme"
 fi
+
+echo "Installing VIM plugins"
+vim --not-a-term +'PlugInstall --sync' +qa

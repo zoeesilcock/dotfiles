@@ -2,12 +2,17 @@
 
 ## Installation
 
-Clone the repo into the home directory and run the linker.sh script.
+Clone the repo into the home directory and run the bootstrap.sh script.
 
-### Some things need to be installed manually on a new machine.
+## Dependencies
+* md5 or md5sum
+* curl
+* vim
 
-* vim-plug: https://github.com/junegunn/vim-plug
-* Custom ctrl-p matcher: https://github.com/JazzCore/ctrlp-cmatcher/
-* OmniSharp: https://github.com/OmniSharp/omnisharp-vim#installation
-* YouCompleteMe: https://github.com/Valloric/YouCompleteMe#installation
-* zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
+For vim to look right you will also need to install a powerline version of Fira Mono from [here](https://github.com/powerline/fonts).
+
+## Development
+```
+skaffold dev
+kubectl.exe exec -it dotfiles-test-machine /bin/bash
+```
