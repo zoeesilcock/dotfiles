@@ -1,13 +1,3 @@
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ "$(. /etc/os-release; echo $NAME)" = "Ubuntu" ]; then
+  . ~/.bash_profile
 fi
-
-if [ -f ~/.bash_prompt ]; then
-  . ~/.bash_prompt
-fi
-
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
