@@ -1,9 +1,9 @@
 FROM ubuntu:20.04
 
 # Prepare the test machine.
-RUN apt-get update && apt-get install -y git vim curl
+RUN apt-get update && apt-get install -y zsh git vim curl
 
-RUN useradd -ms /bin/bash zoee
+RUN useradd -p "$(openssl passwd -1 123)" -ms /bin/bash zoee
 
 RUN mkdir /home/zoee/dotfiles
 COPY ./ /home/zoee/dotfiles
@@ -16,6 +16,8 @@ USER zoee
 
 RUN git submodule init
 RUN git submodule update
+
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 RUN bash bootstrap.sh
 
 WORKDIR /home/zoee
