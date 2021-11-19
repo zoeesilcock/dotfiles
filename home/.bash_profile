@@ -1,28 +1,32 @@
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/applications/Aseprite.app/Contents/MacOS:$PATH"
-
-# Cycle through tab completions
-bind '"\t":menu-complete'
-
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+# Paths
+if [ -d ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
 fi
 
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-  . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
-fi
-
-if [ -x brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
 fi
 
 if [ -f ~/.bash_prompt ]; then
   . ~/.bash_prompt
+fi
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# Initialize node version manager
+if [ -d ~/.nvm ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
+# Initialize pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
 
 # Initialize ruby environment
@@ -32,24 +36,4 @@ fi
 
 if [ -d ~/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-fi
-
-export NVM_DIR="/Users/zoee/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# MND specific stuff
-if [ -d ~/Projects/mnd ]; then
-  eval "$(~/Projects/mnd/bin/mnd init -)"
-fi
-
-if [ -d ~/Projects/mndx-dev ]; then
-  export PATH="~/Projects/mndx-dev/bin:$PATH"
-fi
-
-if [ -d ~/Projects/solr ]; then
-  function solr {
-    cd ~/Projects/solr
-    ./start.sh $1
-    cd -
-  }
 fi

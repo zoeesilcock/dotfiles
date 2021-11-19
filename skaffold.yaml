@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: dotfiles
+build:
+  artifacts:
+  - image: dotfiles-test-machine
+deploy:
+  kubectl:
+    manifests:
+    - test-machine.yml

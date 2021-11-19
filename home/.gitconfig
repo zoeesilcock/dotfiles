@@ -15,12 +15,12 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = master
 [alias]
 	ctags = !.git/hooks/ctags
 	reset-author = commit --amend --reset-author --no-edit
 	undeployed = !git l `git tag|grep production|tail -n 1`..HEAD
 	personal = config user.email \"mrzoee@gmail.com\"
-	work = config user.email \"zoee.silcock@mynewsdesk.com\"
 	reset-hooks = !rm .git/hooks/* & git init
 	a = add
 	co = checkout

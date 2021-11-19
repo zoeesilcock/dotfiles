@@ -6,47 +6,28 @@ call plug#begin('~/.vim/plugged')
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'vim-ruby/vim-ruby'
-Plug 'kchmck/vim-coffee-script'
 Plug 'Chiel92/vim-autoformat'
-Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/syntastic'
 Plug 'skwp/greplace.vim'
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'Valloric/YouCompleteMe', {
-     \ 'build'      : {
-        \ 'mac'     : './install.py --clang-completer --system-libclang --omnisharp-completer',
-        \ 'unix'    : './install.py --clang-completer --system-libclang --omnisharp-completer',
-        \ 'windows' : './install.py --clang-completer --system-libclang --omnisharp-completer',
-        \ 'cygwin'  : './install.py --clang-completer --system-libclang --omnisharp-completer'
-        \ }
-     \ }
-Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
 " Appearance
-color base16-tomorrow
+try
+    let base16colorspace=256
+    colorscheme base16-tomorrow
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
+
 set background=dark
 let &t_Co=256
-set guifont=Inconsolata:h18
-let base16colorspace=256
+set guifont=FiraMono:h18
 
 syntax on
 set number
@@ -87,19 +68,6 @@ xnoremap p "_dP
 cnoremap %% <c-r>=expand('%:p:h').'/'<cr>
 map <leader>e :edit %%
 
-" The Silver Searcher
-noremap <leader>gg :Ack!<space>
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Fugitive
-map <leader>gs :Gstatus<cr>
-map <leader>gd :Gdiff<cr>
-map <leader>gb :Gblame<cr>
-
-" Ctrl-P
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/](test\/dummy|tmp|node_modules|vendor|public|bower_components)$' }
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-
 " Indent guides
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
@@ -130,10 +98,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-" Vinegar
-map <c-_> :Tex<cr>
-noremap _ :Vex<cr>
-
 " Syntastic
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
@@ -143,24 +107,3 @@ let g:grep_cmd_opts = '--noheading'
 
 " Make readable JSON
 :command PrettyJson %!python -m json.tool
-
-" Goyo
-function! s:goyo_enter()
-  set wrap
-  set linebreak
-  setlocal spell spelllang=en_us
-  silent !tmux set status off
-endfunction
-
-function! s:goyo_leave()
-  set nowrap
-  set nolinebreak
-  setlocal nospell
-  silent !tmux set status on
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
