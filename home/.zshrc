@@ -101,7 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls="ls -la "
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
+fi
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"

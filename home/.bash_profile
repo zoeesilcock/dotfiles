@@ -3,8 +3,8 @@ if [ -d ~/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
 fi
 
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
 fi
 
 if [ -f ~/.bash_prompt ]; then
