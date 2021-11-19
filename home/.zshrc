@@ -124,8 +124,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Initialize ruby environment
-if [ -d ~/.rbenv ]; then
-  eval "$(rbenv init -)"
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init - zsh)"
 fi
 
 if [ -d ~/.rvm ]; then
