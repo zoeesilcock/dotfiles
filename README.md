@@ -14,9 +14,8 @@ bash bootstrap.sh
 * md5 or md5sum
 * curl
 * vim
-* Oh My Zsh (if you are using zsh)
-
-For vim to look right you will also need to install a powerline version of Fira Mono from [here](https://github.com/powerline/fonts).
+* [Oh My Zsh](https://ohmyz.sh/#install)
+* [Fira Mono for Powerline font](https://github.com/powerline/fonts).
 
 ## Development
 ```

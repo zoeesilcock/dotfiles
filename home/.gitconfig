@@ -15,6 +15,7 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = master
 [alias]
 	ctags = !.git/hooks/ctags
 	reset-author = commit --amend --reset-author --no-edit
