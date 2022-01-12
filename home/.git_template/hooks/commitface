@@ -6,7 +6,8 @@ unless File.directory? File.expand_path("../../rebase-merge", __FILE__)
   cameraIndex = cameraList.index{|c| c.include?("C920")}
 
   if cameraIndex != nil && cameraIndex > -1
-    camera = "-d \"#{cameraList[cameraIndex]}\""
+    cameraName = cameraList[cameraIndex].sub("=> ", "")
+    camera = "-d \"#{cameraName}\""
   end
 
   file = "~/Dropbox/commitfaces/#{Time.now.strftime("%Y-%m-%d_%H%M%S")}.jpg"
