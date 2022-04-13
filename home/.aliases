@@ -1,3 +1,10 @@
 alias ls="ls -la"
 alias cd..="cd .."
 alias kubecon="kubectl config use-context "
+
+# Timetrap
+alias to="t out "
+alias ti="t in "
+alias tim="t s meloidea;t in "
+alias tie="t s cag;t in ericcson "
+alias til="t s lde;t in "
