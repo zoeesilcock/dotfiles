@@ -13,6 +13,7 @@
 	fileMode = false
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	autocrlf = false
 [init]
 	templatedir = ~/.git_template
 	defaultBranch = master
