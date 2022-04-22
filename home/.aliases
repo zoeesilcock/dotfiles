@@ -7,8 +7,11 @@ alias kubecon="kubectl config use-context "
 alias paratunnel="sudo kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller --address=10.211.55.2 443:443"
 
 # Timetrap
-alias to="t out "
 alias ti="t in "
-alias tim="t s meloidea;t in "
+alias to="t out "
+alias tt="t today "
+alias tta="t today all"
+alias tic="t s cag;t in general "
 alias tie="t s cag;t in ericcson "
 alias til="t s lde;t in "
+alias tim="t s meloidea;t in "
