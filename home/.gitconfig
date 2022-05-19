@@ -35,3 +35,7 @@
 	driver = bundle install
 [rerere]
 	enabled = true
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
