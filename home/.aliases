@@ -1,7 +1,8 @@
+# General
 alias ls="ls -la"
 alias cd..="cd .."
-alias kubecon="kubectl config use-context "
 
+# Windows specific
 if [ -d /mnt/c ]; then
   alias git-native="git.exe"
 fi
@@ -15,9 +16,6 @@ alias ti="t in "
 alias to="t out "
 alias tt="t today "
 alias tta="t today all"
-alias tw="t week "
-alias twa="t week all"
 alias tic="t s cag;t in general "
 alias tie="t s cag;t in ericsson "
 alias til="t s lde;t in "
-alias tim="t s meloidea;t in "
