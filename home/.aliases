@@ -2,6 +2,10 @@ alias ls="ls -la"
 alias cd..="cd .."
 alias kubecon="kubectl config use-context "
 
+if [ -d /mnt/c ]; then
+  alias git-native="git.exe"
+fi
+
 # Kubernetes
 alias kubecon="kubectl config use-context "
 alias paratunnel="sudo kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller --address=10.211.55.2 443:443"

@@ -35,6 +35,8 @@
 	driver = bundle install
 [rerere]
 	enabled = true
+[oh-my-zsh]
+	hide-dirty = 1
 [pull]
 	rebase = true
 [rebase]
