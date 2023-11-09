@@ -58,6 +58,7 @@ if [ ! -L "$HOME/.config/base16-shell" ]; then
 fi
 
 symlink "$(pwd)/home/.zsh_prompt" "$HOME/.oh-my-zsh/custom/themes/zoees.zsh-theme"
+symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 
 echo "Installing VIM plugins"
 vim --not-a-term +'PlugInstall --sync' +qa
