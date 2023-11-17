@@ -3,6 +3,7 @@
 	email = mrzoee@gmail.com
 [push]
 	default = current
+	autoSetupRemote = true
 [merge]
 	ff = false
 	conflictstyle = diff3
