@@ -1,4 +1,10 @@
+-- Leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Mappings
+vim.keymap.set("n", "<leader>w", ":Write<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "-", vim.cmd.Ex)
 
 -- Move blocks
