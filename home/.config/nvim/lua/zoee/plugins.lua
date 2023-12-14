@@ -33,6 +33,7 @@ require("lazy").setup({
     end
   },
   {"mbbill/undotree"},
+  {"numToStr/Comment.nvim", opts = {}},
   {"tpope/vim-fugitive"},
 	{"williamboman/mason.nvim"},
 	{"williamboman/mason-lspconfig.nvim"},
