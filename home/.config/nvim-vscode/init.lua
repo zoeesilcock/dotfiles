@@ -22,6 +22,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Clear search highlight
+vim.keymap.set("n", "<leader>n", ":noh<CR>")
+
 
 -- Options
 vim.opt.relativenumber = true
