@@ -12,19 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
-		dependencies = { "nvim-lua/plenary.nvim" }
-	},
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-	{
-		"ThePrimeagen/harpoon",
-		dependencies = { "nvim-lua/plenary.nvim" }
-	},
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.4",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
   {
     "chriskempson/base16-vim",
     config = function()
@@ -35,11 +35,11 @@ require("lazy").setup({
   {"mbbill/undotree"},
   {"numToStr/Comment.nvim", opts = {}},
   {"tpope/vim-fugitive"},
-	{"williamboman/mason.nvim"},
-	{"williamboman/mason-lspconfig.nvim"},
-	{"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
-	{"neovim/nvim-lspconfig"},
-	{"hrsh7th/cmp-nvim-lsp"},
-	{"hrsh7th/nvim-cmp"},
-	{"L3MON4D3/LuaSnip"},
+  {"williamboman/mason.nvim"},
+  {"williamboman/mason-lspconfig.nvim"},
+  {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
+  {"neovim/nvim-lspconfig"},
+  {"hrsh7th/cmp-nvim-lsp"},
+  {"hrsh7th/nvim-cmp"},
+  {"L3MON4D3/LuaSnip"},
 })
