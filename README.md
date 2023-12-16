@@ -13,9 +13,16 @@ bash bootstrap.sh
 ## Dependencies
 * md5 or md5sum
 * curl
-* vim
 * [Oh My Zsh](https://ohmyz.sh/#install)
-* [Fira Mono for Powerline font](https://github.com/powerline/fonts).
+
+## Additional software
+* [Fira Mono for Powerline font](https://github.com/powerline/fonts)
+* [Fira Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
+* [NVM](https://github.com/nvm-sh/nvm)
+* [RVM](https://rvm.io/rvm/install)
+* [Timetrap](https://github.com/samg/timetrap)
+* [Bob](https://github.com/MordechaiHadad/bob)
+* Neovim 0.9.x+
 
 ## Development
 ```

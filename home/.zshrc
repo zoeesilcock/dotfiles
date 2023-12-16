@@ -158,3 +158,9 @@ fi
 if [ -d "/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite" ]; then
   export PATH="/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite:$PATH"
 fi
+
+# Add Bob and neovim to the path
+if [ -d /home/zoee/.local ]; then
+  export PATH="/home/zoee/.local/bin:$PATH"
+  export PATH="/home/zoee/.local/share/bob/nvim-bin:$PATH"
+fi
