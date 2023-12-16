@@ -23,3 +23,19 @@ cmp.setup({
     ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
   })
 })
+
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {
+          "vim",
+        }
+      },
+      telemetry = {
+        enabled = false,
+      }
+    }
+  }
+}
