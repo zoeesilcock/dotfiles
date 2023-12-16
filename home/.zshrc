@@ -149,10 +149,12 @@ if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init - zsh)"
 fi
 
+# Initialize ruby version manager
 if [ -d ~/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
 
-if [ -d "/mnt/c/Program Files/Aseprite" ]; then
-  export PATH="/mnt/c/Program Files/Aseprite:$PATH"
+# Add Aseprite to the path
+if [ -d "/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite" ]; then
+  export PATH="/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite:$PATH"
 fi
