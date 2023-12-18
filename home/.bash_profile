@@ -42,3 +42,8 @@ fi
 if [ -d "/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite" ]; then
   export PATH="/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite:$PATH"
 fi
+
+# Add Rancher Desktop to path
+if [ -d ~/.rd ]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi

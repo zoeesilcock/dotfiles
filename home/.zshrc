@@ -164,3 +164,8 @@ if [ -d /home/zoee/.local ]; then
   export PATH="/home/zoee/.local/bin:$PATH"
   export PATH="/home/zoee/.local/share/bob/nvim-bin:$PATH"
 fi
+
+# Add Rancher Desktop to path
+if [ -d ~/.rd ]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi
