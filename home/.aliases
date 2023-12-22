@@ -19,3 +19,12 @@ alias tta="t today all"
 alias tic="t s cag;t in general "
 alias tie="t s cag;t in ericsson "
 alias til="t s lde;t in "
+
+# Tmux
+alias tppc="tmux new-session -s ppc -c ~/Developer/horizon \; \
+  send-keys 'minikube tunnel' C-m \; \
+  split-window -v \; \
+  resize-pane -y 90% \; \
+  send-keys 'npm run dev' \; \
+  new-window -c ~/Developer/horizon \; \
+  send-keys 'npm run test:all'\;"
