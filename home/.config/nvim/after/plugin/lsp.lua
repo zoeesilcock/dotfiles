@@ -8,7 +8,16 @@ lsp_zero.setup()
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-  ensure_installed = {"tsserver", "eslint", "lua_ls", "rust_analyzer"},
+  ensure_installed = {
+    -- Javascript
+    "tsserver",
+    "eslint",
+    -- LUA
+    "lua_ls",
+    -- Rust and TOML
+    "rust_analyzer",
+    "taplo",
+  },
   handlers = {
     lsp_zero.default_setup,
   },
