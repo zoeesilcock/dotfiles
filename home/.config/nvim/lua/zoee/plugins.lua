@@ -35,6 +35,7 @@ require("lazy").setup({
   {"mbbill/undotree"},
   {"numToStr/Comment.nvim", opts = {}},
   {"tpope/vim-fugitive"},
+  {"vim-syntastic/syntastic"},
 
   -- LSP and completion
   {"VonHeikemen/lsp-zero.nvim", branch = "v3.x"},
@@ -46,4 +47,7 @@ require("lazy").setup({
   -- LSP installation
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
+
+  -- Rust
+  {"rust-lang/rust.vim"},
 })

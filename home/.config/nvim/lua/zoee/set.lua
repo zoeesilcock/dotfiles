@@ -29,3 +29,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
 
 vim.g.mapleader = " "
+
+vim.g.rustfmt_autosave = 1

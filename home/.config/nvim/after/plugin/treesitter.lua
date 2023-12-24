@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup {
-  ensure_installed = { "javascript", "c_sharp", "markdown", "gdscript", "lua" },
+  ensure_installed = { "javascript", "c_sharp", "markdown", "gdscript", "lua", "rust" },
   sync_install = false,
   auto_install = true,
   highlight = {

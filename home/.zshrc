@@ -169,3 +169,7 @@ fi
 if [ -d ~/.rd ]; then
   export PATH="$HOME/.rd/bin:$PATH"
 fi
+
+# Rust
+. "$HOME/.cargo/env"
+
