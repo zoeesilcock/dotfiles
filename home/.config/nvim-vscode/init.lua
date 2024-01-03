@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+
 -- Mappings
 vim.keymap.set("n", "<leader>w", ":Write<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
@@ -21,6 +22,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Search
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- Paste without overwriting paste register
+vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- Clear search highlight
 vim.keymap.set("n", "<leader>n", ":noh<CR>")

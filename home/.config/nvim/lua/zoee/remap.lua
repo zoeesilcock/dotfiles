@@ -1,3 +1,4 @@
+-- Open file explorer
 vim.keymap.set("n", "-", vim.cmd.Ex)
 
 -- General
@@ -19,7 +20,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Paste without overwriting paste buffer
+-- Paste without overwriting paste register
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- Yank to + buffer
