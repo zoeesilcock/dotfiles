@@ -3,19 +3,26 @@ return {
     branch = "0.1.x",
     dependencies = {"nvim-lua/plenary.nvim"},
     keys = {
-      {"<C-p>", "<cmd>Telescope find_files<CR>"},
+      {"<C-p>", "<cmd>Telescope git_files<CR>"},
+      {"<leader>p", "<cmd>Telescope find_files<CR>"},
       {"<leader>ff", "<cmd>Telescope live_grep<CR>"},
       {"<leader>fw", "<cmd>Telescope grep_string<CR>"},
       {"<leader>h", "<cmd>Telescope help_tags<CR>"},
     },
     config = function()
-      require("telescope").setup{
+      local actions = require("telescope.actions")
+      require("telescope").setup({
         defaults = {
+          mappings = {
+            i = {
+              ["<esc>"] = actions.close
+            },
+          },
           file_ignore_patterns = {
             "node_modules"
           }
         }
-      }
+      })
     end
   },
   {"nvim-telescope/telescope-fzf-native.nvim",
