@@ -6,6 +6,7 @@ return {
   },
   {"VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
+    dependencies = {"L3MON4D3/LuaSnip"},
     config = function()
       local lsp_zero = require("lsp-zero")
       lsp_zero.preset("recommended")
