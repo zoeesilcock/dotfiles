@@ -16,13 +16,16 @@ bash bootstrap.sh
 * [Oh My Zsh](https://ohmyz.sh/#install)
 
 ## Additional software
-* [Fira Mono for Powerline font](https://github.com/powerline/fonts)
-* [Fira Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
 * [NVM](https://github.com/nvm-sh/nvm)
 * [RVM](https://rvm.io/rvm/install)
 * [Timetrap](https://github.com/samg/timetrap)
-* [Bob](https://github.com/MordechaiHadad/bob)
 * Neovim 0.9.x+
+  * [Fira Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
+  * [Bob](https://github.com/MordechaiHadad/bob)
+  * [Ripgrep](https://github.com/BurntSushi/ripgrep)
+  * [fd](https://github.com/sharkdp/fd)
+* vim (deprecated)
+  * [Fira Mono for Powerline font](https://github.com/powerline/fonts)
 
 ## Development
 ```
