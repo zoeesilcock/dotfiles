@@ -160,9 +160,9 @@ if [ -d "/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite" ]; then
 fi
 
 # Add Bob and neovim to the path
-if [ -d /home/zoee/.local ]; then
-  export PATH="/home/zoee/.local/bin:$PATH"
-  export PATH="/home/zoee/.local/share/bob/nvim-bin:$PATH"
+if [ -d ~/.local ]; then
+  export PATH="$HOME.local/bin:$PATH"
+  export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 fi
 
 # Add Rancher Desktop to path
