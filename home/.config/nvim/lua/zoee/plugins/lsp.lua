@@ -17,7 +17,11 @@ return {
     end,
   },
   {"williamboman/mason-lspconfig.nvim",
-    dependencies = {"VonHeikemen/lsp-zero.nvim"},
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+      "VonHeikemen/lsp-zero.nvim",
+    },
     config = function()
       local lsp_zero = require("lsp-zero")
       lsp_zero.extend_lspconfig();
@@ -53,6 +57,4 @@ return {
       })
     end,
   },
-  {"neovim/nvim-lspconfig"},
-  {"L3MON4D3/LuaSnip"},
 }
