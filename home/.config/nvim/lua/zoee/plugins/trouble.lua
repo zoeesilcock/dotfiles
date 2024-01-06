@@ -7,7 +7,6 @@ return {
       {"<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>"},
       {"<leader>xq", "<cmd>TroubleToggle quickfix<CR>"},
       {"<leader>xl", "<cmd>TroubleToggle loclist<CR>"},
-      {"gr", "<cmd>TroubleToggle lsp_references<CR>"},
     }
   },
 }
