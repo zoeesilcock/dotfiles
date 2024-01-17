@@ -69,6 +69,10 @@ return {
           vim.keymap.set('n', 'gd', '<cmd>TroubleToggle lsp_definitions<cr>', opts)
           vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
           vim.keymap.set('n', 'go', '<cmd>TroubleToggle lsp_type_definitions<cr>', opts)
+
+          -- Diagnostics
+          vim.diagnostic.config({ virtual_text = false })
+          vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
         end
       })
     end,
