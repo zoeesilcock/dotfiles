@@ -10,10 +10,13 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.swapfile = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.backupdir = os.getenv("HOME").. "/.vim/backupdir"
+local home = os.getenv("HOME")
+if home == nil or home == '' then home = os.getenv("USERPROFILE") end
+vim.opt.undodir = home .. "/.vim/undodir"
+vim.opt.backupdir = home .. "/.vim/backupdir"
+
 vim.opt.undofile = true
+vim.opt.swapfile = false
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
