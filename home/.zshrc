@@ -174,3 +174,18 @@ fi
 if [ -d ~/.cargo ]; then
   . "$HOME/.cargo/env"
 fi
+
+
+
+
+
+# M1 specifics
+x86() {
+  arch -x86_64 $@
+}
+export MONGOMS_ARCH=x64
+
+# Work specific
+export PATH="/opt/homebrew/opt/mysql-client@5.7/bin:$PATH"
+export PATH="/opt/homebrew/opt/mongodb-community-shell@4.2/bin:$PATH"
+export PATH="/Applications/neovide.app/Contents/MacOS/:$PATH"
