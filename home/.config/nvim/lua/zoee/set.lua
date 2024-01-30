@@ -11,7 +11,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 local home = os.getenv("HOME")
-if home == nil or home == '' then home = os.getenv("USERPROFILE") end
+if home == nil or home == "" then home = os.getenv("USERPROFILE") end
 vim.opt.undodir = home .. "/.vim/undodir"
 vim.opt.backupdir = home .. "/.vim/backupdir"
 
@@ -39,7 +39,12 @@ vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 
 -- Neovide specific
 if vim.g.neovide then
-  vim.g.neovide_fullscreen = true
   vim.g.neovide_scroll_animation_length = 0.1
-  vim.o.guifont = "FiraMono Nerd Font:h12:sb"
+
+  if (vim.loop.os_uname().sysname == "Darwin") then
+    vim.o.guifont = "FiraMono Nerd Font:h18:sb"
+  else
+    vim.g.neovide_fullscreen = true
+    vim.o.guifont = "FiraMono Nerd Font:h12:sb"
+  end
 end
