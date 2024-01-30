@@ -37,3 +37,12 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Clear search highlight
 vim.keymap.set("n", "<leader>n", ":noh<CR>")
+
+-- Neovide specific
+if vim.g.neovide then
+  vim.keymap.set('v', '<c-c>', '"+y') -- Copy
+  vim.keymap.set('n', '<c-v>', '"+P') -- Paste normal mode
+  vim.keymap.set('v', '<c-v>', '"+P') -- Paste visual mode
+  vim.keymap.set('c', '<c-v>', '<C-R>+') -- Paste command mode
+  vim.keymap.set('i', '<c-v>', '<ESC>l"+Pli') -- Paste insert mode
+end

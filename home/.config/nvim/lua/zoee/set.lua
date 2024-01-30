@@ -36,3 +36,10 @@ vim.g.mapleader = " "
 vim.g.rustfmt_autosave = 1
 
 vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
+
+-- Neovide specific
+if vim.g.neovide then
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_scroll_animation_length = 0.1
+  vim.o.guifont = "FiraMono Nerd Font:h12:sb"
+end
