@@ -66,7 +66,7 @@ return {
 
           vim.keymap.set("n", "gi", "<cmd>TroubleToggle lsp_implementations<cr>", opts)
           vim.keymap.set("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
-          vim.keymap.set("n", "gd", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
+          vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
           vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
           vim.keymap.set("n", "go", "<cmd>TroubleToggle lsp_type_definitions<cr>", opts)
 
