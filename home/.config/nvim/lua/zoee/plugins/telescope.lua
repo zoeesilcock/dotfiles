@@ -1,7 +1,10 @@
 return {
   {"nvim-telescope/telescope.nvim",
     branch = "0.1.x",
-    dependencies = {"nvim-lua/plenary.nvim"},
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim"
+    },
     keys = {
       {"<C-p>", "<cmd>Telescope git_files<CR>"},
       {"<leader>p", "<cmd>Telescope find_files<CR>"},
@@ -11,11 +14,17 @@ return {
     },
     config = function()
       local actions = require("telescope.actions")
+      local trouble = require("trouble.providers.telescope")
+
       require("telescope").setup({
         defaults = {
           mappings = {
             i = {
-              ["<esc>"] = actions.close
+              ["<esc>"] = actions.close,
+              ["<c-t>"] = trouble.open_with_trouble,
+            },
+            n = {
+              ["<c-t>"] = trouble.open_with_trouble
             },
           },
           file_ignore_patterns = {
