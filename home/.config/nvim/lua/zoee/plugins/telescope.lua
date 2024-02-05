@@ -6,8 +6,8 @@ return {
       "folke/trouble.nvim"
     },
     keys = {
-      {"<C-p>", "<cmd>Telescope git_files<CR>"},
-      {"<leader>p", "<cmd>Telescope find_files<CR>"},
+      {"<C-p>", "<cmd>Telescope find_files<CR>"},
+      {"<leader>p", "<cmd>Telescope git_files<CR>"},
       {"<leader>ff", "<cmd>Telescope live_grep<CR>"},
       {"<leader>fw", "<cmd>Telescope grep_string<CR>"},
       {"<leader>fh", "<cmd>Telescope help_tags<CR>"},
