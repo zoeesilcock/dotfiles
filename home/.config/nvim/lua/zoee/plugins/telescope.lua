@@ -10,6 +10,7 @@ return {
       {"<leader>p", "<cmd>Telescope git_files<CR>"},
       {"<leader>ff", "<cmd>Telescope live_grep<CR>"},
       {"<leader>fw", "<cmd>Telescope grep_string<CR>"},
+      {"<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<CR>"},
       {"<leader>fh", "<cmd>Telescope help_tags<CR>"},
     },
     config = function()
