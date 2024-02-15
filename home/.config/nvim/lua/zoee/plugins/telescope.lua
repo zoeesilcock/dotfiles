@@ -15,7 +15,33 @@ return {
     },
     config = function()
       local actions = require("telescope.actions")
+      local builtin = require("telescope.builtin")
       local trouble = require("trouble.providers.telescope")
+
+      function vim.getVisualSelection()
+        vim.cmd("noau normal! \"vy\"")
+        local text = vim.fn.getreg("v")
+        vim.fn.setreg("v", {})
+
+        text = string.gsub(text, "\n", "")
+        if #text > 0 then
+          return text
+        else
+          return ""
+        end
+      end
+
+      -- Grep for the current selection in all files.
+      vim.keymap.set("v", "<leader>fw", function()
+        local text = vim.getVisualSelection()
+        builtin.grep_string({ default_text = text, use_regex = false })
+      end, opts)
+
+      -- Fuzzy find the current selection in the current buffer.
+      vim.keymap.set("v", "<leader>fb", function()
+        local text = vim.getVisualSelection()
+        builtin.current_buffer_fuzzy_find({ default_text = text })
+      end, opts)
 
       require("telescope").setup({
         defaults = {
