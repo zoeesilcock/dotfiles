@@ -20,6 +20,8 @@ return {
         })
       end
 
+      require("lspconfig").gdscript.setup{}
+
       require("mason-lspconfig").setup({
         ensure_installed = {
           -- Javascript
