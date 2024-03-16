@@ -1,5 +1,6 @@
 return {
   {"MattesGroeger/vim-bookmarks",
+    lazy = false,
     keys = {
       {"<C-e>", "<cmd>:BookmarkShowAll<CR>"},
     },
