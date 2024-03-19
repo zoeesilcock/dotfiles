@@ -20,7 +20,16 @@ return {
         })
       end
 
-      require("lspconfig").gdscript.setup{}
+      local ncat_executable = "nc"
+
+      -- Use ncat on Windows.
+      if package.config:sub(1,1) == "\\" then
+        ncat_executable = "ncat"
+      end
+
+      require("lspconfig").gdscript.setup({
+        cmd = { ncat_executable, "localhost", "6005" },
+      })
 
       require("mason-lspconfig").setup({
         ensure_installed = {
