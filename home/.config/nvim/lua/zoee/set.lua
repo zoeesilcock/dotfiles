@@ -15,6 +15,10 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
+-- Splits
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- Undo
 local home = os.getenv("HOME")
 if home == nil or home == "" then home = os.getenv("USERPROFILE") end
