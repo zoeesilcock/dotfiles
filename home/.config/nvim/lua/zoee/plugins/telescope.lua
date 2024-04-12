@@ -48,10 +48,10 @@ return {
           mappings = {
             i = {
               ["<esc>"] = actions.close,
-              ["<c-t>"] = trouble.open_with_trouble,
+              ["<C-l>"] = trouble.open_with_trouble,
             },
             n = {
-              ["<c-t>"] = trouble.open_with_trouble
+              ["<C-l>"] = trouble.open_with_trouble
             },
           },
           file_ignore_patterns = {
