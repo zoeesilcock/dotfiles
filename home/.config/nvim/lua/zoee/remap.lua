@@ -16,6 +16,9 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Tabs
+vim.keymap.set("n", "<C-w>t", ":tabnew<CR>")
+
 -- Search
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -45,4 +48,5 @@ if vim.g.neovide then
   vim.keymap.set('v', '<c-v>', '"+P') -- Paste visual mode
   vim.keymap.set('c', '<c-v>', '<C-R>+') -- Paste command mode
   vim.keymap.set('i', '<c-v>', '<ESC>l"+Pli') -- Paste insert mode
+  vim.keymap.set('n', '<F11>', ':let g:neovide_fullscreen = !g:neovide_fullscreen<CR>') -- Toggle fullscreen mode
 end
