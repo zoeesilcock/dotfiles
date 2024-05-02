@@ -9,6 +9,7 @@ fi
 
 # Kubernetes
 alias kubecon="kubectl config use-context "
+alias localtunnel="sudo kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller --address=0.0.0.0 443:443"
 alias paratunnel="sudo kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller --address=10.211.55.2 443:443"
 
 # Timetrap
