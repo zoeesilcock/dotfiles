@@ -136,7 +136,10 @@ if [ -d ~/.nvm ]; then
     fi
   }
   add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
+
+  if [ -f ./.nvmrc ]; then
+    load-nvmrc
+  fi
 fi
 
 # Initialize pyenv
