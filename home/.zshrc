@@ -174,7 +174,7 @@ if [ -d ~/.rd ]; then
 fi
 
 # Rust
-if [ -d ~/.cargo ]; then
+if [ -d ~/.cargo/env ]; then
   . "$HOME/.cargo/env"
 fi
 
