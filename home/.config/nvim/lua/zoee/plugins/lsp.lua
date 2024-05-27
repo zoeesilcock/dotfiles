@@ -84,6 +84,9 @@ return {
           -- Diagnostics
           vim.diagnostic.config({ virtual_text = false })
           vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
+
+          -- Inlay hints
+          vim.keymap.set("n", "<leader>h", "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>", opts)
         end
       })
     end,
