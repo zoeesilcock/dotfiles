@@ -49,6 +49,9 @@ vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 -- Rust
 vim.g.rustfmt_autosave = 1
 
+-- Zig
+vim.g.zig_fmt_autosave = 0
+
 -- Neovide specific
 if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.1
