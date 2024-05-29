@@ -4,6 +4,7 @@ return {
     config = true,
     opts = {
       open_mapping = [[<c-j>]],
+      insert_mappings = true,
     }
   }
 }
