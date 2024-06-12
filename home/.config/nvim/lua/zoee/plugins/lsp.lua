@@ -69,7 +69,7 @@ return {
           -- these will be buffer-local keybindings
           -- because they only work if you have an active language server
           vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
-          vim.keymap.set("n", "S", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+          vim.keymap.set("n", "<leader>S", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 
           vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
           vim.keymap.set({"n", "x"}, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
