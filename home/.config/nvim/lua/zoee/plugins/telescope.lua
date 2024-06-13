@@ -16,7 +16,7 @@ return {
     config = function()
       local actions = require("telescope.actions")
       local builtin = require("telescope.builtin")
-      local trouble = require("trouble.sources.telescope")
+      local open_with_trouble = require("trouble.sources.telescope").open
 
       function vim.getVisualSelection()
         vim.cmd("noau normal! \"vy\"")
@@ -48,10 +48,10 @@ return {
           mappings = {
             i = {
               ["<esc>"] = actions.close,
-              ["<C-l>"] = trouble.open_with_trouble,
+              ["<C-l>"] = open_with_trouble,
             },
             n = {
-              ["<C-l>"] = trouble.open_with_trouble
+              ["<C-l>"] = open_with_trouble
             },
           },
           file_ignore_patterns = {

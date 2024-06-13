@@ -75,11 +75,11 @@ return {
           vim.keymap.set({"n", "x"}, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
           vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 
-          vim.keymap.set("n", "gi", "<cmd>TroubleToggle lsp_implementations<cr>", opts)
-          vim.keymap.set("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
+          vim.keymap.set("n", "gi", "<cmd>Trouble lsp_implementations toggle<cr>", opts)
+          vim.keymap.set("n", "gr", "<cmd>Trouble lsp_references toggle<cr>", opts)
           vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
           vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-          vim.keymap.set("n", "go", "<cmd>TroubleToggle lsp_type_definitions<cr>", opts)
+          vim.keymap.set("n", "go", "<cmd>Trouble lsp_type_definitions toggle<cr>", opts)
 
           -- Diagnostics
           vim.diagnostic.config({ virtual_text = false })
