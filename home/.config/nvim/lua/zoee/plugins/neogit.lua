@@ -5,7 +5,7 @@ return {
       "sindrets/diffview.nvim",
     },
     keys = {
-      { "<leader>gs", "<cmd>Neogit kind=split_above<CR>", desc = "Launch neogit" },
+      { "<leader>gs", "<cmd>Neogit<CR>", desc = "Launch neogit" },
       { "<leader>gd", "<cmd>DiffviewFileHistory %<CR>", mode = "n", desc = "Launch diffview for current file" },
       { "<leader>gd", "<cmd>'<,'>DiffviewFileHistory<CR>", mode = "v", desc = "Launch diffview for current line" },
     },
@@ -18,14 +18,14 @@ return {
     lazy = false,
     keys = {
       {
-        "<leader>gb",
+        "ggb",
         function()
           require("gitsigns").blame_line{full=true}
         end,
         desc = "Show blame for current line",
       },
       {
-        "<leader>gn",
+        "ggn",
         function()
           if not vim.wo.diff then
             require("gitsigns").nav_hunk("next")
@@ -34,7 +34,7 @@ return {
         desc = "Go to next hunk",
       },
       {
-        "<leader>gp",
+        "ggp",
         function()
           if not vim.wo.diff then
             require("gitsigns").nav_hunk("prev")
