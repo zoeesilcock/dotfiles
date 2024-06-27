@@ -35,8 +35,9 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
--- Replace current word
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Substitute current word (all, confirm)
+vim.keymap.set("n", "<leader>sa", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>sc", [[:,$s/\<<C-r><C-w>\>//gc<Left><Left><Left>]])
 
 -- Clear search highlight
 vim.keymap.set("n", "<leader>n", ":noh<CR>")
