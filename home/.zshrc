@@ -1,3 +1,5 @@
+export EDITOR="nvim"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -177,4 +179,3 @@ fi
 if [ -d ~/.cargo/env ]; then
   . "$HOME/.cargo/env"
 fi
-
