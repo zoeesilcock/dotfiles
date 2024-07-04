@@ -31,6 +31,10 @@ return {
         cmd = { ncat_executable, "localhost", "6005" },
       })
 
+      require("lspconfig").zls.setup({
+        cmd = { "zls", "--config-path", "zls.json" },
+      })
+
       require("mason-lspconfig").setup({
         ensure_installed = {
           -- Javascript
@@ -41,6 +45,8 @@ return {
           -- Rust and TOML
           "rust_analyzer",
           "taplo",
+          -- Zig
+          "zls",
         },
         handlers = {
           default_setup,
