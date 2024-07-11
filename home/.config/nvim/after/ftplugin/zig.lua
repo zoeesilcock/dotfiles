@@ -8,7 +8,7 @@ if string.match(vim.fn.getcwd(), "handmade%-zig") then
         vim.keymap.set("n", "<F6>", "<cmd>TermExec cmd=\"clear ; zig build ; Start-Process -NoNewWindow -FilePath ./zig-out/bin/handmade-zig.exe -WorkingDirectory ./data\"<CR>")
         vim.keymap.set("i", "<F6>", "<c-c><cmd>TermExec cmd=\"clear ; zig build ; Start-Process -NoNewWindow -FilePath ./zig-out/bin/handmade-zig.exe -WorkingDirectory ./data\"<CR>")
     else
-        vim.keymap.set("n", "<F6>", "<cmd>TermExec cmd=\"clear && zig build && ./zig-out/bin/handmade-zig -WorkingDirectory ./data\"<CR>")
-        vim.keymap.set("i", "<F6>", "<c-c><cmd>TermExec cmd=\"clear && zig build && ./zig-out/bin/handmade-zig -WorkingDirectory ./data\"<CR>")
+        vim.keymap.set("n", "<F6>", "<cmd>TermExec cmd=\"clear && zig build run\"<CR>")
+        vim.keymap.set("i", "<F6>", "<c-c><cmd>TermExec cmd=\"clear && zig build run\"<CR>")
     end
 end
