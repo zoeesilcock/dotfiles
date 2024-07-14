@@ -6,6 +6,7 @@ return {
     opts = {
       open_mapping = [[<c-j>]],
       insert_mappings = true,
+      direction = "float",
     }
   }
 }

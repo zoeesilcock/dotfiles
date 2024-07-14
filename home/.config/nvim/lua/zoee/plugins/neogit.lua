@@ -18,14 +18,14 @@ return {
     lazy = false,
     keys = {
       {
-        "ggb",
+        "<leader>gb",
         function()
           require("gitsigns").blame_line{full=true}
         end,
         desc = "Show blame for current line",
       },
       {
-        "ggn",
+        "<leader>gn",
         function()
           if not vim.wo.diff then
             require("gitsigns").nav_hunk("next")
@@ -34,7 +34,7 @@ return {
         desc = "Go to next hunk",
       },
       {
-        "ggp",
+        "<leader>gp",
         function()
           if not vim.wo.diff then
             require("gitsigns").nav_hunk("prev")
