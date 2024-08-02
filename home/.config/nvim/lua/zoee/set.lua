@@ -1,6 +1,7 @@
 -- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
 -- Folding
 vim.opt.foldmethod = "expr"
