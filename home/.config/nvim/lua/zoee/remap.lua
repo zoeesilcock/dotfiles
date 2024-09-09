@@ -51,3 +51,17 @@ if vim.g.neovide then
   vim.keymap.set('i', '<c-v>', '<ESC>l"+Pli') -- Paste insert mode
   vim.keymap.set('n', '<F11>', ':let g:neovide_fullscreen = !g:neovide_fullscreen<CR>') -- Toggle fullscreen mode
 end
+
+-- to allow typing as usual
+vim.keymap.set("i", ", ", ", ", { desc = "Comma space" })
+vim.keymap.set("i", ",<CR>", ",<CR>", { desc = "Comma enter" })
+vim.keymap.set("i", ",,", ",,", { desc = "Comma comma" })
+
+-- now special things
+vim.keymap.set("i", ",m", "/", { desc = ",m type /" })
+vim.keymap.set("i", ",a", "''<Esc>i", { desc = "single quotes" })
+vim.keymap.set("i", ",s", '""<Esc>i', { desc = "double quotes" })
+vim.keymap.set("i", ",d", "()<Esc>i", { desc = "parens" })
+vim.keymap.set("i", ",f", "[]<Esc>i", { desc = "brackets" })
+vim.keymap.set("i", ",g", "{}<Esc>i", { desc = "curlies" })
+vim.keymap.set("i", ",r", "||<Esc>i", { desc = "pipes" })
