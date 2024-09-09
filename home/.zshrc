@@ -173,6 +173,7 @@ fi
 # Rust
 if [ -d ~/.cargo/env ]; then
   . "$HOME/.cargo/env"
+  . "$HOME/.cargo/bin"
 fi
 
 # Add Snap to path
