@@ -48,6 +48,7 @@ done
 
 symlink "$(pwd)/home/.zsh_prompt" "$HOME/.oh-my-zsh/custom/themes/zoees.zsh-theme"
 symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
+symlink "$(pwd)/home/.config/alacritty" "$HOME/.config/alacritty"
 symlink "$(pwd)/home/.config/nvim-vscode" "$HOME/.config/nvim-vscode"
 
 echo "Installing VIM plugins"
