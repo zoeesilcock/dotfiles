@@ -1,0 +1,13 @@
+import = ["catppuccin-mocha.toml"]
+
+working_directory = "/Users/zoee/Developer"
+
+[font]
+normal = { family = "FiraMono Nerd Font" }
+size = 18
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Command|Shift", action = "CreateNewWindow" },
+  { key = "Enter", mods = "Command", action = "ToggleSimpleFullscreen" },
+]

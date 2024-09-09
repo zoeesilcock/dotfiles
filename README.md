@@ -5,8 +5,6 @@
 Clone the repo into the home directory and run the bootstrap.sh script.
 
 ```
-git submodule init
-git submodule update
 bash bootstrap.sh
 ```
 

@@ -46,17 +46,6 @@ for file in home/.[^.]*; do
   fi
 done
 
-if [ ! -L "$HOME/.config/base16-shell" ]; then
-  if [ -d "$HOME/.config/base16-shell" ]; then
-    rm -rf "$HOME/.config/base16-shell"
-  fi
-  mkdir -p "$HOME/.config"
-
-  echo "linking base16-shell"
-  symlink "$(pwd)/home/base16-shell" "$HOME/.config/base16-shell"
-  symlink "$HOME/.config/base16-shell/scripts/base16-tomorrow-night.sh" "$HOME/.base16_theme"
-fi
-
 symlink "$(pwd)/home/.zsh_prompt" "$HOME/.oh-my-zsh/custom/themes/zoees.zsh-theme"
 symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 symlink "$(pwd)/home/.config/nvim-vscode" "$HOME/.config/nvim-vscode"
