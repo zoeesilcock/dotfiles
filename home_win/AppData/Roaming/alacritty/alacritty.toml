@@ -1,0 +1,15 @@
+import = ["C:\\Users\\zoee\\AppData\\Roaming\\alacritty\\catppuccin-mocha.toml"]
+
+working_directory = "C:\\Users\\zoee\\Developer"
+
+[shell]
+program = "powershell"
+
+[font]
+normal = { family = "FiraMono Nerd Font", style = "Bold" }
+size = 12
+
+[keyboard]
+bindings = [
+{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
