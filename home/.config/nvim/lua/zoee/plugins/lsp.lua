@@ -38,7 +38,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           -- Javascript
-          "tsserver",
+          "ts_ls",
           "eslint",
           -- LUA
           "lua_ls",
