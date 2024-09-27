@@ -70,3 +70,6 @@ vim.keymap.set("i", "äf", "{}<Esc>i", { desc = "curlies" })
 vim.keymap.set("i", "är", "||<Esc>i", { desc = "pipes" })
 
 vim.keymap.set("i", "äj", "@", { desc = "@" })
+
+-- Since ctrl-h is backspace in insert mode, this makes ctrl-l delete.
+vim.keymap.set("i", "<c-l>", "<del>", { desc = "delete" })
