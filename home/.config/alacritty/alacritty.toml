@@ -1,5 +1,5 @@
+[general]
 import = ["/Users/zoee/.config/alacritty/catppuccin-mocha.toml"]
-
 working_directory = "/Users/zoee/Developer"
 
 [font]

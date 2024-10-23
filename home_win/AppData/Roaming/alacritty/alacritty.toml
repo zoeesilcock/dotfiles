@@ -1,8 +1,8 @@
+[general]
 import = ["C:\\Users\\zoee\\AppData\\Roaming\\alacritty\\catppuccin-mocha.toml"]
-
 working_directory = "C:\\Users\\zoee\\Developer"
 
-[shell]
+[terminal.shell]
 program = "powershell"
 
 [font]
