@@ -46,6 +46,10 @@ for file in home/.[^.]*; do
   fi
 done
 
+if [ ! -d ~/.nvm ]; then
+  mkdir "$HOME/.config"
+fi
+
 symlink "$(pwd)/home/.zsh_prompt" "$HOME/.oh-my-zsh/custom/themes/zoees.zsh-theme"
 symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 symlink "$(pwd)/home/.config/alacritty" "$HOME/.config/alacritty"
