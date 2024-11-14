@@ -36,18 +36,6 @@ return {
       })
 
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          -- Javascript
-          "ts_ls",
-          "eslint",
-          -- LUA
-          "lua_ls",
-          -- Rust and TOML
-          "rust_analyzer",
-          "taplo",
-          -- Zig
-          "zls",
-        },
         handlers = {
           default_setup,
           lua_ls = function()
