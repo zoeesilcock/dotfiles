@@ -73,3 +73,5 @@ vim.keymap.set("i", "äj", "@", { desc = "@" })
 
 -- Since ctrl-h is backspace in insert mode, this makes ctrl-l delete.
 vim.keymap.set("i", "<c-l>", "<del>", { desc = "delete" })
+-- Since ctrl-j inserts a new line in insert mode, this makes ctrl-k remove a line.
+vim.keymap.set("i", "<c-k>", "<Esc>ddki", { desc = "delete line" })
