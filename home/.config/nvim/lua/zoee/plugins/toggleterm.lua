@@ -5,7 +5,8 @@ return {
     lazy = false,
     opts = {
       open_mapping = [[<c-j>]],
-      insert_mappings = true,
+      start_in_insert = true,
+      insert_mappings = false,
       direction = "float",
     }
   }
