@@ -1,0 +1,4 @@
+font-size = 18
+font-family = "FiraMono Nerd Font"
+theme = catppuccin-mocha
+macos-non-native-fullscreen = true
