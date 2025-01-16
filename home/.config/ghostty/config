@@ -1,4 +1,10 @@
 font-size = 18
 font-family = "FiraMono Nerd Font"
+font-thicken = true
+
 theme = catppuccin-mocha
+
 macos-non-native-fullscreen = true
+quick-terminal-animation-duration = 0
+
+keybind = global:cmd+´=toggle_quick_terminal
