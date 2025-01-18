@@ -1,10 +1,5 @@
-if (vim.loop.os_uname().sysname == "Windows_NT") then
-    vim.keymap.set("n", "<S-F5>", "<cmd>!zig fmt %<CR><cmd>:e<CR>")
-    vim.keymap.set("i", "<S-F5>", "<c-c><cmd>!zig fmt %<CR><cmd>:e<CR>")
-else
-    vim.keymap.set("n", "<S-F5>", "<cmd>call zig#fmt#Format()<CR>")
-    vim.keymap.set("i", "<S-F5>", "<c-c><cmd>call zig#fmt#Format()<CR>")
-end
+vim.keymap.set("n", "<S-F5>", "<cmd>!zig fmt %<CR><cmd>:e<CR><cmd>LspRestart<CR>")
+vim.keymap.set("i", "<S-F5>", "<c-c><cmd>!zig fmt %<CR><cmd>:e<CR><cmd>LspRestart<CR>")
 
 vim.keymap.set("n", "<F5>", "<cmd>wa<CR><cmd>TermExec cmd=\"clear ; zig build\"<CR>")
 vim.keymap.set("i", "<F5>", "<c-c><cmd>wa<CR><cmd>TermExec cmd=\"clear ; zig build\"<CR>")
