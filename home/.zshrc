@@ -175,6 +175,13 @@ if [ -d ~/.cargo/env ]; then
   . "$HOME/.cargo/bin"
 fi
 
+# Zig
+if [ -d ~/.zvm ]; then
+  export ZVM_INSTALL="$HOME/.zvm/self"
+  export PATH="$PATH:$HOME/.zvm/bin"
+  export PATH="$PATH:$ZVM_INSTALL/"
+fi
+
 # Add Snap to path
 if [ -d /snap/bin ]; then
   export PATH="/snap/bin:$PATH"

@@ -44,3 +44,10 @@ fi
 
 # Rust
 . "$HOME/.cargo/env"
+
+# Zig
+if [ -d ~/.zvm ]; then
+  export ZVM_INSTALL="$HOME/.zvm/self"
+  export PATH="$PATH:$HOME/.zvm/bin"
+  export PATH="$PATH:$ZVM_INSTALL/"
+fi
