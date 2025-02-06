@@ -9,6 +9,7 @@ return {
       "neovim/nvim-lspconfig",
       "williamboman/mason.nvim",
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/nvim-cmp",
       "folke/trouble.nvim",
     },
     config = function()
