@@ -17,11 +17,12 @@ bash bootstrap.sh
 * [NVM](https://github.com/nvm-sh/nvm)
 * [RVM](https://rvm.io/rvm/install)
 * [Timetrap](https://github.com/samg/timetrap)
-* Neovim 0.9.x+
+* Neovim 0.10.x+
   * [Fira Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
   * [Bob](https://github.com/MordechaiHadad/bob)
   * [Ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
+  * Make and gcc are needed for telescope-fzf-native.nvim
 * vim (deprecated)
   * [vim-plug](https://github.com/junegunn/vim-plug)
   * [Fira Mono for Powerline font](https://github.com/powerline/fonts)

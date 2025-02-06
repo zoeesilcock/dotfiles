@@ -1,11 +1,12 @@
-apiVersion: skaffold/v2beta5
+apiVersion: skaffold/v4beta12
 kind: Config
 metadata:
   name: dotfiles
 build:
   artifacts:
-  - image: dotfiles-test-machine
-deploy:
-  kubectl:
-    manifests:
+    - image: dotfiles-test-machine
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
     - test-machine.yml
