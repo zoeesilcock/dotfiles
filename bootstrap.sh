@@ -42,7 +42,7 @@ for file in home/.[^.]*; do
   fi
 done
 
-if [ ! -d ~/.nvm ]; then
+if [ ! -d ~/.config ]; then
   mkdir "$HOME/.config"
 fi
 
