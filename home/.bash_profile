@@ -43,7 +43,10 @@ if [ -d ~/.rd ]; then
 fi
 
 # Rust
-. "$HOME/.cargo/env"
+if [ -d ~/.cargo/env ]; then
+  . "$HOME/.cargo/env"
+  . "$HOME/.cargo/bin"
+fi
 
 # Zig
 if [ -d ~/.zvm ]; then
