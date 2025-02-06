@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Installing vim-plug"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 function symlink {
   ln -nsf $1 $2
 }
@@ -55,6 +51,3 @@ symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 symlink "$(pwd)/home/.config/alacritty" "$HOME/.config/alacritty"
 symlink "$(pwd)/home/.config/nvim-vscode" "$HOME/.config/nvim-vscode"
 symlink "$(pwd)/home/.config/ghostty" "$HOME/.config/ghostty"
-
-echo "Installing VIM plugins"
-vim --not-a-term +'PlugInstall --sync' +qa

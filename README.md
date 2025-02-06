@@ -23,6 +23,7 @@ bash bootstrap.sh
   * [Ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
 * vim (deprecated)
+  * [vim-plug](https://github.com/junegunn/vim-plug)
   * [Fira Mono for Powerline font](https://github.com/powerline/fonts)
 
 ## Development
