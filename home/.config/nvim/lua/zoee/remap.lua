@@ -1,5 +1,11 @@
 -- Open file explorer
-vim.keymap.set("n", "-", vim.cmd.Ex)
+local open_explorer_at_current_file = function()
+  local file_path = vim.fn.expand('%')
+  local file_name = file_path:match("[^/\\]+$")
+  vim.cmd("Ex")
+  vim.cmd("call search(expand('" .. file_name .. "'))")
+end
+vim.keymap.set("n", "-", open_explorer_at_current_file)
 
 -- General
 vim.keymap.set("n", "<leader>w", ":w<CR>")
