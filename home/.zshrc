@@ -160,7 +160,7 @@ fi
 
 # Add Bob and neovim to the path
 if [ -d ~/.local ]; then
-  export PATH="$HOME.local/bin:$PATH"
+  export PATH="$HOME/.local/bin:$PATH"
   export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 fi
 
