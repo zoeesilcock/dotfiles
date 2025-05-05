@@ -187,7 +187,7 @@ if [ -d /snap/bin ]; then
   export PATH="/snap/bin:$PATH"
 fi
 
-if [ "$(. /etc/os-release; echo $NAME)" = "Arch Linux" ]; then
+if [ -d /etc/os-release ] && ["$(. /etc/os-release; echo $NAME)" = "Arch Linux" ]; then
   if uwsm check may-start; then
     exec uwsm start hyprland.desktop
   fi
