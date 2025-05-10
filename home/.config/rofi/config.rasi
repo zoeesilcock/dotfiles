@@ -1,0 +1,4 @@
+configuration {
+}
+
+@theme "~/.config/rofi/catppuccin-default.rasi"

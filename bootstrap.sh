@@ -51,5 +51,7 @@ symlink "$(pwd)/home/.config/nvim" "$HOME/.config/nvim"
 symlink "$(pwd)/home/.config/alacritty" "$HOME/.config/alacritty"
 symlink "$(pwd)/home/.config/nvim-vscode" "$HOME/.config/nvim-vscode"
 symlink "$(pwd)/home/.config/ghostty" "$HOME/.config/ghostty"
+
 symlink "$(pwd)/home/.config/hypr" "$HOME/.config/hypr"
 symlink "$(pwd)/home/.config/waybar" "$HOME/.config/waybar"
+symlink "$(pwd)/home/.config/rofi" "$HOME/.config/rofi"

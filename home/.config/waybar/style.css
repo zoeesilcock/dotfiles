@@ -1,3 +1,5 @@
+@import "mocha.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -5,11 +7,12 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: @base;
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    color: @text;
 }
 
 window#waybar.hidden {
@@ -50,7 +53,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    /* background-color: #a37800; */
 }
 
 #workspaces button {
@@ -114,12 +117,14 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: @surface0;
+    color: @text;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @surface0;
+    color: @text;
+    margin-right: 8px;
 }
 
 #battery.charging, #battery.plugged {
@@ -169,38 +174,41 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: @surface0;
+    color: @text;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: @surface0;
+    color: @text;
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: @surface0;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: @surface0;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: @surface0;
+    color: @text;
+    margin-right: 8px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: @base;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: @surface0;
+    color: @text;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: @surface0;
+    color: @text;
 }
 
 #wireplumber {
@@ -226,8 +234,14 @@ label:focus {
     background-color: #ffa000;
 }
 
+#custom-power {
+    padding-right: 8px;
+}
+
 #temperature {
-    background-color: #f0932b;
+    background-color: @surface0;
+    color: @text;
+    margin-right: 8px;
 }
 
 #temperature.critical {
@@ -235,7 +249,8 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @surface0;
+    color: @text;
 }
 
 #tray > .passive {
@@ -248,7 +263,8 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @base;
+    color: @text;
 }
 
 #idle_inhibitor.activated {
