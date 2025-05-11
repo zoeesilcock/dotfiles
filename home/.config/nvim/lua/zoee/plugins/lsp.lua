@@ -36,26 +36,6 @@ return {
         cmd = { "zls", "--config-path", "zls.json" },
       })
 
-      require("mason-lspconfig").setup({
-        handlers = {
-          default_setup,
-          lua_ls = function()
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = {
-                    "vim",
-                  }
-                },
-                telemetry = {
-                  enabled = false,
-                }
-              }
-            }
-          end
-        },
-      })
-
       vim.api.nvim_create_autocmd("LspAttach", {
         desc = "LSP actions",
         callback = function(event)
