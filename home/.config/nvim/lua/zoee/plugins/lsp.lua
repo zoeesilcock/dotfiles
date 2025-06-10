@@ -1,29 +1,23 @@
 return {
-  {"williamboman/mason.nvim",
-    config = function()
-      require("mason").setup({})
-    end,
-  },
-  {"williamboman/mason-lspconfig.nvim",
+  {"mason-org/mason-lspconfig.nvim",
     dependencies = {
+      "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
-      "williamboman/mason.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/nvim-cmp",
       "folke/trouble.nvim",
     },
     config = function()
+      require('mason').setup()
+      require('mason-lspconfig').setup()
+
       local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      local default_setup = function(server)
-        require("lspconfig")[server].setup({
-          capabilities = lsp_capabilities,
-        })
-      end
-
-      local ncat_executable = "nc"
+      vim.lsp.config("*", {
+        capabilities = lsp_capabilities,
+      })
 
       -- Use ncat on Windows.
+      local ncat_executable = "nc"
       if package.config:sub(1,1) == "\\" then
         ncat_executable = "ncat"
       end
