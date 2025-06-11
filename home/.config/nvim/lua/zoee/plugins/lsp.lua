@@ -1,7 +1,8 @@
 return {
   {"mason-org/mason-lspconfig.nvim",
+    opts = {},
     dependencies = {
-      "mason-org/mason.nvim",
+      {"mason-org/mason.nvim", opts = {}},
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/nvim-cmp",
@@ -22,12 +23,25 @@ return {
         ncat_executable = "ncat"
       end
 
-      require("lspconfig").gdscript.setup({
+      vim.lsp.config("gdscript", {
         cmd = { ncat_executable, "localhost", "6005" },
       })
 
-      require("lspconfig").zls.setup({
+      vim.lsp.config("zsl", {
         cmd = { "zls", "--config-path", "zls.json" },
+      })
+
+      vim.lsp.config("lua_ls", {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = {"vim"}
+            },
+            telemetry = {
+              enabled = false,
+            }
+          }
+        }
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {
