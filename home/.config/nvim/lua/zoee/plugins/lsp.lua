@@ -27,7 +27,7 @@ return {
         cmd = { ncat_executable, "localhost", "6005" },
       })
 
-      vim.lsp.config("zsl", {
+      vim.lsp.config("zls", {
         cmd = { "zls", "--config-path", "zls.json" },
       })
 
