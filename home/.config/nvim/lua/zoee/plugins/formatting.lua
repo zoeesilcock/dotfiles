@@ -1,12 +1,23 @@
-return {
-  {"sbdchd/neoformat",
-    config = function()
-      vim.g.neoformat_try_node_exe = 1
+local prettier = { "prettierd", "prettier", stop_after_first = true }
 
-      vim.api.nvim_create_autocmd({"BufWritePre"}, {
-        pattern = {"*.ts,*.tsx"},
-        command = "Neoformat prettier",
-      })
-    end
+return {
+  {"stevearc/conform.nvim",
+    dependencies = {
+      "zapling/mason-conform.nvim",
+    },
+    opts = {
+      formatters_by_ft = {
+        zig = { "zigfmt" },
+        html = { "superhtml" },
+        css = prettier,
+        json = prettier,
+        javascript = prettier,
+        typescript = prettier,
+        yaml = { "yamlfmt" }
+      },
+      format_on_save = {
+        timeout_ms = 500,
+      },
+    },
   },
 }
