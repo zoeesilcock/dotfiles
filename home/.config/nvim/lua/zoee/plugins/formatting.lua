@@ -12,7 +12,9 @@ return {
         css = prettier,
         json = prettier,
         javascript = prettier,
+        javascriptreact = prettier,
         typescript = prettier,
+        typescriptreact = prettier,
         yaml = { "yamlfmt" }
       },
       format_on_save = {
