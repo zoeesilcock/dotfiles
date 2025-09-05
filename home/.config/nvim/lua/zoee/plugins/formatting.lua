@@ -5,6 +5,8 @@ return {
     dependencies = {
       "zapling/mason-conform.nvim",
     },
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
         zig = { "zigfmt" },

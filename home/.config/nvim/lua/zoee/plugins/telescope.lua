@@ -2,6 +2,7 @@ return {
   {"nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
       "nvim-lua/plenary.nvim",
       "folke/trouble.nvim"
     },
@@ -67,5 +68,5 @@ return {
     config = function()
       require("telescope").load_extension("fzf")
     end
-  }
+  },
 }

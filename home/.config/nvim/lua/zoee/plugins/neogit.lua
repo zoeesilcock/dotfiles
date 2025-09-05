@@ -15,7 +15,7 @@ return {
     end,
   },
   {"lewis6991/gitsigns.nvim",
-    lazy = false,
+    event = { "BufReadPre" },
     keys = {
       {
         "<leader>gb",
@@ -46,5 +46,5 @@ return {
     config = function()
       require("gitsigns").setup()
     end
-  }
+  },
 }

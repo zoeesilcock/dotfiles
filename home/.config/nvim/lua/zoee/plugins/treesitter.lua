@@ -1,5 +1,8 @@
 return {
   {"nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-context",
+    },
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup {
@@ -20,14 +23,10 @@ return {
     end
   },
   {"nvim-treesitter/nvim-treesitter-context",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
     config = function()
       require("treesitter-context").setup({
-        -- multiline_threshold = 2,
         max_lines = 5,
       })
     end
-  }
+  },
 }

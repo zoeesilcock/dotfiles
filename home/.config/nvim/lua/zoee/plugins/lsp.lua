@@ -1,13 +1,16 @@
 return {
+  {"williamboman/mason.nvim",
+    cmd = "Mason",
+  },
   {"mason-org/mason-lspconfig.nvim",
     opts = {},
     dependencies = {
       {"mason-org/mason.nvim", opts = {}},
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/nvim-cmp",
       "folke/trouble.nvim",
     },
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup()

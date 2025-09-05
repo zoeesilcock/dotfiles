@@ -1,10 +1,9 @@
 return {
   {"ggandor/leap.nvim",
-    lazy = false,
-    config = function()
-      vim.keymap.set({'n', 'x', 'o'}, 'ö',  '<Plug>(leap-forward)')
-      vim.keymap.set({'n', 'x', 'o'}, 'Ö',  '<Plug>(leap-backward)')
-      vim.keymap.set({'n', 'x', 'o'}, 'öö', '<Plug>(leap-from-window)')
-    end,
+    keys = {
+      { "ö", "<Plug>(leap-forward)", mode = {"n", "x", "o"}, desc = "Leap forward" },
+      { "Ö", "<Plug>(leap-backward)", mode = {"n", "x", "o"}, desc = "Leap backward" },
+      { "öö", "<Plug>(leap-from-window)", mode = {"n", "x", "o"}, desc = "Leap in other window" },
+    },
   },
 }
