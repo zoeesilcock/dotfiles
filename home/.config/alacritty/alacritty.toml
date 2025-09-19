@@ -3,8 +3,9 @@ import = ["/Users/zoee/.config/alacritty/catppuccin-mocha.toml"]
 working_directory = "/Users/zoee/Developer"
 
 [font]
-normal = { family = "FiraMono Nerd Font" }
-size = 18
+# normal = { family = "FiraMono Nerd Font" }
+normal = { family = "0xProto Nerd Font" }
+size = 11
 
 [keyboard]
 bindings = [

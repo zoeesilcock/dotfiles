@@ -1,8 +1,9 @@
-font-size = 18
-font-family = "FiraMono Nerd Font"
-font-thicken = true
+font-size = 16
+# font-family = "FiraMono Nerd Font"
+# font-thicken = true
+font-family = "0xProto Nerd Font"
 
-theme = catppuccin-mocha
+theme = "Catppuccin Mocha"
 
 macos-non-native-fullscreen = true
 quick-terminal-animation-duration = 0

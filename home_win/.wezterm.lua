@@ -8,8 +8,8 @@ config.color_scheme = "catppuccin-mocha"
 config.enable_tab_bar = false
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 
-config.font = wezterm.font("FiraMono Nerd Font", { weight = "Bold" })
-config.font_size = 12
+config.font = wezterm.font("0xProto Nerd Font")
+config.font_size = 11
 config.cell_width = 0.9
 config.line_height = 0.9
 config.freetype_load_flags = 'NO_HINTING'

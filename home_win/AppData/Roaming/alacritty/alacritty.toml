@@ -6,8 +6,9 @@ working_directory = "C:\\Users\\zoee\\Developer"
 program = "powershell"
 
 [font]
-normal = { family = "FiraMono Nerd Font", style = "Bold" }
-size = 12
+# normal = { family = "FiraMono Nerd Font", style = "Bold" }
+normal = { family = "0xProto Nerd Font", style = "Regular" }
+size = 11
 
 [keyboard]
 bindings = [
