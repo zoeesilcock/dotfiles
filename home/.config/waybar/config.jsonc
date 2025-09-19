@@ -2,25 +2,47 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 18, // Waybar height (to be removed for auto height)
+    // "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "mode": "dock",
     "modules-left": [
-        "network",
-        "cpu",
-        "memory",
-        "temperature",
+        // "network",
+        "custom/right_inv#2",
+        "hyprland/window",
+        "custom/right_div#2",
     ],
     "modules-center": [
+        "custom/left_div#3",
+        "cpu",
+        "custom/left_inv#3",
+        "custom/left_div#2",
+        "memory",
+        "custom/left_inv#2",
+        "custom/left_div#1",
+        "temperature",
+        "custom/left_inv#1",
+        "custom/left_div",
+        "custom/distro",
+        "custom/right_div",
+        "custom/right_inv#1",
         "clock",
+        "custom/right_div#1",
+        "custom/right_inv#2",
+        "clock#date",
+        "custom/right_div#2",
     ],
     "modules-right": [
+        "custom/left_div#2",
         "pulseaudio",
-        "backlight",
-        "battery",
+        "custom/left_inv#2",
+        // "backlight",
+        // "battery",
+        // "bluetooth",
+        "custom/left_div#3",
         "idle_inhibitor",
+        "custom/left_inv#3",
         "custom/power"
     ],
     // Modules configuration
@@ -33,10 +55,18 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "locale": "en_US.UTF-8",
+    },
+    "clock#date": {
+        "format": "󰸗 {:%Y-%m-%d}",
+        "tooltip-format": "<big>{:L%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "locale": "en_US.UTF-8",
     },
     "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "cpu#date": {
         "format": "{usage}% ",
         "tooltip": false
     },
@@ -111,6 +141,15 @@
         },
         "on-click": "pavucontrol"
     },
+    "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format": " {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": " {num_connections} connected",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
     "custom/power": {
         "format" : "⏻ ",
         "tooltip": false,
@@ -122,5 +161,73 @@
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
         }
+    },
+    "custom/distro": {
+      "format": "󰣇",
+      "tooltip": false
+    },
+    "custom/left_div": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_div": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_inv": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_inv": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_div#1": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_div#1": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_inv#1": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_inv#1": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_div#2": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_div#2": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_inv#2": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_inv#2": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_div#3": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_div#3": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/left_inv#3": {
+      "format": "",
+      "tooltip": false
+    },
+    "custom/right_inv#3": {
+      "format": "",
+      "tooltip": false
     }
 }

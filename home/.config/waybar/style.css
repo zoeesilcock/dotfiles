@@ -1,18 +1,30 @@
 @import "mocha.css";
 
+@define-color background @crust;
+@define-color module-color0 @lavender;
+@define-color module-color1 @surface0;
+@define-color module-color2 @base;
+@define-color module-color3 @mantle;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: "0xProto Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: @background;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
     color: @text;
+}
+
+window#waybar > box {
+	margin: 2px;
+	background-color: @background;
 }
 
 window#waybar.hidden {
@@ -96,6 +108,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#window,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -115,10 +128,19 @@ button:hover {
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
+#window {
+    background-color: @module-color2;
+    margin: 0;
+}
 
 #clock {
-    background-color: @surface0;
+    background-color: @module-color1;
     color: @text;
+    font-weight: bold;
+}
+
+#clock.date {
+    background-color: @module-color2;
 }
 
 #battery {
@@ -174,12 +196,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: @surface0;
+    background-color: @module-color3;
     color: @text;
 }
 
 #memory {
-    background-color: @surface0;
+    background-color: @module-color2;
     color: @text;
 }
 
@@ -202,12 +224,12 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: @surface0;
+    background-color: @module-color2;
     color: @text;
 }
 
 #pulseaudio.muted {
-    background-color: @surface0;
+    background-color: @module-color2;
     color: @text;
 }
 
@@ -235,13 +257,13 @@ label:focus {
 }
 
 #custom-power {
-    padding-right: 8px;
+    padding: 0 8px 0 18px;
+    font-size: 16px;
 }
 
 #temperature {
-    background-color: @surface0;
+    background-color: @module-color1;
     color: @text;
-    margin-right: 8px;
 }
 
 #temperature.critical {
@@ -263,7 +285,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: @base;
+    background-color: @module-color3;
     color: @text;
 }
 
@@ -341,3 +363,40 @@ label:focus {
 #privacy-item.audio-out {
     background-color: #0069d4;
 }
+
+#custom-distro {
+	padding: 0 10px 0 5px;
+	font-size: 23px;
+	background-color: @lavender;
+	color: @base;
+}
+
+#custom-left_div,
+#custom-left_inv,
+#custom-right_div,
+#custom-right_inv {
+	color: @module-color0;
+	font-size: 24px;
+}
+
+#custom-left_div.1,
+#custom-left_inv.1,
+#custom-right_div.1,
+#custom-right_inv.1 {
+  color: @module-color1;
+}
+
+#custom-left_div.2,
+#custom-left_inv.2,
+#custom-right_div.2,
+#custom-right_inv.2 {
+  color: @module-color2;
+}
+
+#custom-left_div.3,
+#custom-left_inv.3,
+#custom-right_div.3,
+#custom-right_inv.3 {
+  color: @module-color3;
+}
+
