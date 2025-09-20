@@ -108,6 +108,11 @@ if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
 
+# Use separate command history for each tmux pane
+if [[ $TMUX_PANE ]]; then
+  HISTFILE=$HOME/.zsh_history_tmux_${TMUX_PANE:1}
+fi
+
 # Initialize node version manager
 if [ -d ~/.nvm ]; then
   export NVM_DIR="$HOME/.nvm"
