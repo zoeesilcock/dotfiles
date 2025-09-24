@@ -36,10 +36,10 @@
     "modules-right": [
         "custom/left_div#2",
         "pulseaudio",
+        "bluetooth",
         "custom/left_inv#2",
         // "backlight",
         // "battery",
-        // "bluetooth",
         "custom/left_div#3",
         "idle_inhibitor",
         "custom/left_inv#3",
@@ -139,19 +139,19 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
     "bluetooth": {
       // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-      "format": " {status}",
+      "format": "",
       "format-disabled": "", // an empty format will hide the module
-      "format-connected": " {num_connections} connected",
-      "tooltip-format": "{controller_alias}\t{controller_address}",
-      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+      "tooltip-format": "Status: {status}\n\n{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "Status: {status}\n\n{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "blueman-manager"
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

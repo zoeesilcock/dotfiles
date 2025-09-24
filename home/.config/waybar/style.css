@@ -233,6 +233,15 @@ label:focus {
     color: @text;
 }
 
+#bluetooth {
+    background-color: @module-color2;
+    padding-right: 10px;
+}
+
+#bluetooth.connected {
+  color: @blue;
+}
+
 #wireplumber {
     background-color: #fff0f5;
     color: #000000;
