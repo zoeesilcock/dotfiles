@@ -266,7 +266,7 @@ label:focus {
 }
 
 #custom-power {
-    padding: 0 8px 0 18px;
+    padding: 0 16px 0 10px;
     font-size: 16px;
 }
 
@@ -280,7 +280,7 @@ label:focus {
 }
 
 #tray {
-    background-color: @surface0;
+    background-color: @module-color3;
     color: @text;
 }
 
@@ -294,8 +294,9 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: @module-color3;
+    background-color: @module-color2;
     color: @text;
+    padding-right: 20px;
 }
 
 #idle_inhibitor.activated {
