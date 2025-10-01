@@ -23,9 +23,15 @@ alias til="t s lde;t in "
 
 # Tmux
 alias tppc="tmux new-session -s ppc -c ~/Developer/horizon \; \
-  send-keys 'minikube tunnel' C-m \; \
+  send-keys 'minikube tunnel' \; \
   split-window -v \; \
   resize-pane -y 90% \; \
-  send-keys 'npm run dev' \; \
+  send-keys 'minikube start' C-m \; \
   new-window -c ~/Developer/horizon \; \
-  send-keys 'npm run test:all'\;"
+  send-keys 'npm run test:all'\; \
+  new-window -c ~/Developer/ppc-rdm/app \; \
+  send-keys 'nvim .' C-m \; \
+  split-window -h \; \
+  send-keys 'npm run test'\; \
+  split-window -v \; \
+  send-keys 'cd ..' C-m \;"
