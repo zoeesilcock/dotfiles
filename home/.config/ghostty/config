@@ -9,3 +9,5 @@ macos-non-native-fullscreen = true
 quick-terminal-animation-duration = 0
 
 keybind = global:cmd+´=toggle_quick_terminal
+
+shell-integration-features = ssh-env,ssh-terminfo
