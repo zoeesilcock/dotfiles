@@ -163,6 +163,10 @@ if [ -d "/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite" ]; then
   export PATH="/mnt/c/Program Files (x86)/Steam/steamapps/common/Aseprite:$PATH"
 fi
 
+if [ -d "/Users/zoee/Library/Application Support/Steam/steamapps/common/Aseprite/Aseprite.app/Contents/MacOS" ]; then
+  export PATH="/Users/zoee/Library/Application Support/Steam/steamapps/common/Aseprite/Aseprite.app/Contents/MacOS:$PATH"
+fi
+
 # Add Bob and neovim to the path
 if [ -d ~/.local ]; then
   export PATH="$HOME/.local/bin:$PATH"
