@@ -1,18 +1,18 @@
 return {
   {"nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
       "nvim-lua/plenary.nvim",
       "folke/trouble.nvim"
     },
     keys = {
-      {"<C-p>", "<cmd>Telescope find_files<CR>"},
+      {"<C-p>", "<cmd>Telescope frecency workspace=CWD<CR>"},
       {"<leader>p", "<cmd>Telescope git_files<CR>"},
       {"<leader>ff", "<cmd>Telescope live_grep<CR>"},
       {"<leader>fw", "<cmd>Telescope grep_string<CR>"},
       {"<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<CR>"},
       {"<leader>fh", "<cmd>Telescope help_tags<CR>"},
+      {"<leader>fo", "<cmd>Telescope buffers<CR>"},
     },
     config = function()
       local actions = require("telescope.actions")
@@ -48,7 +48,6 @@ return {
         defaults = {
           mappings = {
             i = {
-              ["<esc>"] = actions.close,
               ["<C-l>"] = open_with_trouble,
             },
             n = {
@@ -67,6 +66,11 @@ return {
     dependencies = {"nvim-telescope/telescope.nvim"},
     config = function()
       require("telescope").load_extension("fzf")
+    end
+  },
+  {"nvim-telescope/telescope-frecency.nvim",
+    config = function()
+      require("telescope").load_extension("frecency")
     end
   },
 }
