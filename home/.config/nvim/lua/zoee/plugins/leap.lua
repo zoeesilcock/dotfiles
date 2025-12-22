@@ -1,5 +1,5 @@
 return {
-  {"ggandor/leap.nvim",
+  {"https://codeberg.org/andyg/leap.nvim",
     keys = {
       { "ö", "<Plug>(leap-forward)", mode = {"n", "x", "o"}, desc = "Leap forward" },
       { "Ö", "<Plug>(leap-backward)", mode = {"n", "x", "o"}, desc = "Leap backward" },
