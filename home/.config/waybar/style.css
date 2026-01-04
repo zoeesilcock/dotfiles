@@ -129,7 +129,6 @@ button:hover {
     margin-right: 0;
 }
 #window {
-    background-color: @module-color2;
     margin: 0;
 }
 

@@ -9,9 +9,7 @@
     "mode": "dock",
     "modules-left": [
         // "network",
-        "custom/right_inv#2",
         "hyprland/window",
-        "custom/right_div#2",
     ],
     "modules-center": [
         "custom/left_div#3",
