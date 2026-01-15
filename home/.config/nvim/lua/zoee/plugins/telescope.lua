@@ -57,7 +57,12 @@ return {
           file_ignore_patterns = {
             "node_modules"
           }
-        }
+        },
+        extensions = {
+          frecency = {
+            matcher = "fuzzy",
+          },
+        },
       })
     end
   },
