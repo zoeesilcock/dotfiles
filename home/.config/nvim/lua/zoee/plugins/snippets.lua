@@ -35,7 +35,7 @@ local function custom_snippets()
       -- While
       t("while ("),
       rep(1),
-      t(" <= "),
+      t(" < "),
       i(2, "count"),
       t(") : ("),
       rep(1),
