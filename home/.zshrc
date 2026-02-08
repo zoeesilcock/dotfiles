@@ -197,7 +197,7 @@ if [ -d /snap/bin ]; then
 fi
 
 if [[ -f /etc/os-release && "$(. /etc/os-release; echo $NAME)" = "Arch Linux" ]]; then
-  if uwsm check may-start; then
+  if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]] && uwsm check may-start; then
     exec uwsm start hyprland.desktop
   fi
 fi
