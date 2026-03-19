@@ -1,7 +1,7 @@
-font-size = 16
+font-size = 15
+font-family = "0xProto Nerd Font"
 # font-family = "FiraMono Nerd Font"
 # font-thicken = true
-font-family = "0xProto Nerd Font"
 
 theme = "Catppuccin Mocha"
 
