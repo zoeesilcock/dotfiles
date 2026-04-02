@@ -1,9 +1,13 @@
 -- Open file explorer
 local open_explorer_at_current_file = function()
+  vim.cmd("Ex")
+
+  -- Restore the cursor position to the current file in the explorer.
   local file_path = vim.fn.expand('%')
   local file_name = file_path:match("[^/\\]+$")
-  vim.cmd("Ex")
-  vim.cmd("call search(expand('" .. file_name .. "'))")
+  if (file_name ~= nil) then
+    vim.cmd("call search(expand('" .. file_name .. "'))")
+  end
 end
 vim.keymap.set("n", "-", open_explorer_at_current_file)
 
