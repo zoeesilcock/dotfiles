@@ -1,4 +1,9 @@
 // -*- mode: jsonc -*-
+//
+// References:
+// * https://github.com/sejjy/mechabar
+// * https://github.com/catppuccin/waybar
+//
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -55,6 +60,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "locale": "en_US.UTF-8",
+        "tooltip": false,
     },
     "clock#date": {
         "format": "󰸗 {:%Y-%m-%d}",
@@ -171,7 +177,9 @@
     },
     "custom/distro": {
       "format": "󰣇",
-      "tooltip": false
+      "exec": "/home/zoee/.config/waybar/custom-check-updates.sh",
+      "tooltip": true,
+      "return-type": "json"
     },
     "custom/left_div": {
       "format": "",
