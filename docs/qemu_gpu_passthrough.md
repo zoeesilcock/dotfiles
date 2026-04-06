@@ -102,6 +102,11 @@ nvim ~/mnt/vm-code/file.py
 * Install ripgrep.
 * Fix button repeat on windows.
 * Include VM configuration in dotfiles?
+* Instructions for use:
+  * Launch VM: `sudo virsh start win11`
+  * Launch Looking Glass: `looking-glass-client -f /dev/shm/looking-glass -F`
+  * Launch editor: `cd ~/mnt/win11/handmade-zig && nvim .`
+  * Build: `zig build --watch -Dpackage=All -Dtarget=x86_64-windows`
 
 ## How to share files
 * sshfs: works, but issues with start/stop and git repo.
