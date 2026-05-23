@@ -1,33 +1,38 @@
--- TODO: Figure out how to express this in lua config.
--- # No border when there is only one window on a workspace.
--- windowrule = border_size 0, match:workspace w[t1]
-
+--
+-- Global.
+--
+--
+hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
 hl.window_rule({
-    -- Fix some dragging issues with XWayland
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-    no_focus = true,
+    name  = "no-gaps-wtv1",
+    match = { float = false, workspace = "w[tv1]" },
+    border_size = 0,
+    rounding    = 0,
 })
 
-local suppressMaximizeRule = hl.window_rule({
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
-    suppress_event = "maximize",
+hl.window_rule({
+  -- Fix some dragging issues with XWayland
+  name  = "fix-xwayland-drags",
+  match = {
+    class      = "^$",
+    title      = "^$",
+    xwayland   = true,
+    float      = true,
+    fullscreen = false,
+    pin        = false,
+  },
+  no_focus = true,
 })
 
 --
+-- Specific.
+--
 
 hl.window_rule({
-    name  = "1password",
-    match = { class = "1password" },
-    float = true,
+  name = "1password",
+  match = { class = "1password" },
+  float = true,
 })
 
 hl.window_rule({
