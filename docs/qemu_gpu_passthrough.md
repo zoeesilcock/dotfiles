@@ -94,6 +94,10 @@ sshfs zoee@192.168.1.12:/C:/Users/zoee/Developer/handmade-zig ~/mnt/vm-code
 nvim ~/mnt/vm-code/file.py
 ```
 
+## Virtual Display
+* Install in the Windows guest: https://github.com/timminator/ParsecVDA-Always-Connected
+
+
 ## Todo
 * Figure out how to store VM state between suspends.
   * Seems like it isn't possible with passthrough GPU.
@@ -107,6 +111,7 @@ nvim ~/mnt/vm-code/file.py
   * Launch Looking Glass: `looking-glass-client -f /dev/shm/looking-glass -F`
   * Launch editor: `cd ~/mnt/win11/handmade-zig && nvim .`
   * Build: `zig build --watch -Dpackage=All -Dtarget=x86_64-windows`
+
 
 ## How to share files
 * sshfs: works, but issues with start/stop and git repo.
