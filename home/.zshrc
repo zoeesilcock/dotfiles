@@ -196,8 +196,25 @@ if [ -d /snap/bin ]; then
   export PATH="/snap/bin:$PATH"
 fi
 
+# Hyprland login.
 if [[ -f /etc/os-release && "$(. /etc/os-release; echo $NAME)" = "Arch Linux" ]]; then
   if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]] && uwsm check may-start; then
     exec uwsm start hyprland.desktop
   fi
+fi
+
+# Yazi.
+if command -v yazi >/dev/null 2>&1; then
+  function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+    command rm -f -- "$tmp"
+  }
+fi
+
+# Zoxide.
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
 fi
