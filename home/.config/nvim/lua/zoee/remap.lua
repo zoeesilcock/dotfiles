@@ -52,6 +52,10 @@ vim.keymap.set("n", "<leader>sc", [[:,$s/\<<C-r><C-w>\>//gc<Left><Left><Left>]])
 -- Clear search highlight
 vim.keymap.set("n", "<leader>n", ":noh<CR>")
 
+-- Quickfix lists
+vim.keymap.set("n", "<C-l>", ":cnext<CR>")
+vim.keymap.set("n", "<C-h>", ":cprev<CR>")
+
 -- Neovide specific
 if vim.g.neovide then
   vim.keymap.set('v', '<c-c>', '"+y') -- Copy
@@ -83,5 +87,5 @@ vim.keymap.set("i", "äj", "@", { desc = "@" })
 
 -- Since ctrl-h is backspace in insert mode, this makes ctrl-l delete.
 vim.keymap.set("i", "<c-l>", "<del>", { desc = "delete" })
--- Since ctrl-j inserts a new line in insert mode, this makes ctrl-k remove a line.
+-- Since ctrl-j inserts a new line in insert mode, this makes ctrl-k removes a line.
 vim.keymap.set("i", "<c-k>", "<Esc>ddki", { desc = "delete line" })

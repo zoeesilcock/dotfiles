@@ -8,7 +8,6 @@ return {
       {"mason-org/mason.nvim", opts = {}},
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
-      "folke/trouble.nvim",
     },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
@@ -61,11 +60,11 @@ return {
           vim.keymap.set({"n", "x"}, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
           vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 
-          vim.keymap.set("n", "gi", "<cmd>Trouble lsp_implementations toggle<cr>", opts)
-          vim.keymap.set("n", "gr", "<cmd>Trouble lsp_references toggle<cr>", opts)
+          vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
+          vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
           vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
           vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-          vim.keymap.set("n", "go", "<cmd>Trouble lsp_type_definitions toggle<cr>", opts)
+          vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
 
           -- Diagnostics
           vim.diagnostic.config({ virtual_text = false })
