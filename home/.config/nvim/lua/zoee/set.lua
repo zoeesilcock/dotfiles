@@ -1,3 +1,10 @@
+-- UI
+require('vim._core.ui2').enable({
+  enable = true,
+});
+vim.opt.winborder = "single"
+vim.opt.completeopt:append("popup")
+
 -- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true

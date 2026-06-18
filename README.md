@@ -17,7 +17,7 @@ bash bootstrap.sh
 * [NVM](https://github.com/nvm-sh/nvm)
 * [RVM](https://rvm.io/rvm/install)
 * [Timetrap](https://github.com/samg/timetrap)
-* Neovim 0.11.x+
+* Neovim 0.12.x+
   * [0xProto Nerdfont](https://www.nerdfonts.com/font-downloads)
   * [Fira Mono Nerdfont](https://www.nerdfonts.com/font-downloads)
   * [Bob](https://github.com/MordechaiHadad/bob)
