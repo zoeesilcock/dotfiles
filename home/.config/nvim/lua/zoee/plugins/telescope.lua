@@ -6,7 +6,7 @@ return {
       "folke/trouble.nvim"
     },
     keys = {
-      {"<C-p>", "<cmd>Telescope frecency workspace=CWD<CR>"},
+      {"<C-p>", "<cmd>Telescope find_files<CR>"},
       {"<leader>p", "<cmd>Telescope git_files<CR>"},
       {"<leader>ff", "<cmd>Telescope live_grep<CR>"},
       {"<leader>fw", "<cmd>Telescope grep_string<CR>"},
@@ -58,11 +58,6 @@ return {
             "node_modules"
           }
         },
-        extensions = {
-          frecency = {
-            matcher = "fuzzy",
-          },
-        },
       })
     end
   },
@@ -71,11 +66,6 @@ return {
     dependencies = {"nvim-telescope/telescope.nvim"},
     config = function()
       require("telescope").load_extension("fzf")
-    end
-  },
-  {"nvim-telescope/telescope-frecency.nvim",
-    config = function()
-      require("telescope").load_extension("frecency")
     end
   },
 }
