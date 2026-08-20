@@ -5,6 +5,7 @@ font-family = "0xProto Nerd Font"
 
 theme = "Catppuccin Mocha"
 
+fullscreen = non-native-visible-menu
 macos-non-native-fullscreen = true
 quick-terminal-animation-duration = 0
 
