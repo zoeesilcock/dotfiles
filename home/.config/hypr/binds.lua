@@ -1,4 +1,4 @@
-local terminal = "ghostty"
+local terminal = "ghostty --font-size=11 --adjust-cell-height=-20%"
 local fileManager = "nautilus"
 local menu = "rofi -show drun"
 local mainMod = "SUPER"
