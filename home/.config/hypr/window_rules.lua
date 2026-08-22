@@ -68,7 +68,7 @@ hl.window_rule({
 
 hl.window_rule({
   name = "joplin",
-  match = { class = "^(@joplin/app-desktop)$" },
+  match = { class = "^(@joplin/app-desktop|appimagekit-joplin)$" },
   workspace = "special:magic",
   float = true,
   move = "1146 0",
@@ -95,7 +95,7 @@ hl.window_rule({
 
 hl.window_rule({
   name = "floating-flint",
-  match = { class = "^(hello_pixels|evolver|diamonds|cube|template)$" },
+  match = { class = "^(hello_pixels|evolver|diamonds|cube|template|wildcar)$" },
   float = true,
   move = "monitor_w-window_w 0",
 })
