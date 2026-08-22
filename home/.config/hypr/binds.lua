@@ -13,6 +13,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.layout("togglesplit"))
 hl.bind("ALT + Return", hl.dsp.window.fullscreen())
 hl.bind("SHIFT + SUPER + 4", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+hl.bind(mainMod .. " + Tab",  hl.dsp.focus({ last = true }))
 
 -- Move focus with mainMod + vim keys.
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
