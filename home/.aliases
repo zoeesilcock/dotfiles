@@ -22,7 +22,17 @@ alias tie="t s cag;t in ericsson "
 alias til="t s lde;t in "
 
 # Tmux
-alias tppc="tmux new-session -s ppc -c ~/Developer/ppc \; \
+alias tm="tmux \; \
+  new-session -s files -c ~/ \; \
+  send-keys 'y' C-m \; \
+  new-session -s main -c ~/dotfiles \; \
+  send-keys 'nvim' C-m \; \
+  split-window -h \; \
+  new-window -c ~/Developer \; \
+  \;"
+
+alias tppc="tmux \; \
+  new-session -s ppc -c ~/Developer/ppc \; \
   send-keys 'sudo minikube tunnel' C-m \; \
   split-window -v \; \
   resize-pane -y 90% \; \
@@ -30,7 +40,7 @@ alias tppc="tmux new-session -s ppc -c ~/Developer/ppc \; \
   new-window -c ~/Developer/ppc \; \
   send-keys 'npm run test:all'\; \
   new-window -c ~/Developer/ppc-rdm \; \
-  send-keys 'nvim .' C-m \; \
+  send-keys 'nvim' C-m \; \
   split-window -h -c ~/Developer/ppc-rdm \; \
   send-keys 'npm run dev'\; \
   split-window -v -c ~/Developer/ppc-rdm/app \; \
@@ -43,4 +53,5 @@ alias tppc="tmux new-session -s ppc -c ~/Developer/ppc \; \
   resize-pane -y 16 -t 1 \; \
   resize-pane -y 10 -t 2 \; \
   resize-pane -y 10 -t 3 \; \
-  resize-pane -y 39 -t 4 \;"
+  resize-pane -y 39 -t 4
+  \;"
