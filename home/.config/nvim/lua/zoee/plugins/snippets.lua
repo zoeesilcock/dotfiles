@@ -44,6 +44,16 @@ local function custom_snippets()
       i(0),
       t({ "", "}" }),
     }),
+    s("assert", {
+      t("std.debug.assert("),
+      i(0),
+      t(");"),
+    }),
+    s("panic", {
+      t("@panic(\""),
+      i(0),
+      t("\");"),
+    }),
   });
 
   ls.add_snippets("cs", {
