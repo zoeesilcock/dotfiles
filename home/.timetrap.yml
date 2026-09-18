@@ -1,5 +1,5 @@
 ---
-database_file: "/Users/zoee/Dropbox/Timetrap/.timetrap.db"
+database_file: "/Users/zoee/Library/CloudStorage/Dropbox/Timetrap/.timetrap.db"
 round_in_seconds: 900
 append_notes_delimiter: " "
 formatter_search_paths:
