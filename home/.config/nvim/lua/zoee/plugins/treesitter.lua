@@ -4,6 +4,7 @@ return {
       "nvim-treesitter/nvim-treesitter-context",
     },
     build = ":TSUpdate",
+    lazy = false,
     config = function()
       require("nvim-treesitter.configs").setup {
         ensure_installed = {
