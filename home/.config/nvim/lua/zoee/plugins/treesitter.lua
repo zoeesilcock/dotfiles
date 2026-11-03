@@ -5,6 +5,7 @@ local parsers = {
   "markdown",
   "lua",
   "zig",
+  "hlsl",
 }
 
 local filetypes_with_highlighting = {
@@ -15,7 +16,8 @@ local filetypes_with_highlighting = {
   "csharp",
   "markdown",
   "lua",
-  "zig"
+  "zig",
+  "hlsl",
 }
 
 return {

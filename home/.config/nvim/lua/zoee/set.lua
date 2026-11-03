@@ -60,6 +60,14 @@ vim.g.rustfmt_autosave = 1
 -- Zig
 vim.g.zig_fmt_autosave = 0
 
+-- Missing file types
+vim.filetype.add({
+  extension = {
+    hlsl = "hlsl",
+    hlsli = "hlsl",
+  },
+})
+
 -- Windows specific
 if (vim.loop.os_uname().sysname == "Windows_NT") then
   local powershell_options = {
