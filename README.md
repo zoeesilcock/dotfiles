@@ -24,6 +24,7 @@ bash bootstrap.sh
   * [Ripgrep](https://github.com/BurntSushi/ripgrep)
   * [fd](https://github.com/sharkdp/fd)
   * Make and gcc are needed for telescope-fzf-native.nvim
+  * [Tree-sitter](https://github.com/tree-sitter/tree-sitter) CLI on the path.
 * vim (deprecated)
   * [vim-plug](https://github.com/junegunn/vim-plug)
   * [Fira Mono for Powerline font](https://github.com/powerline/fonts)
