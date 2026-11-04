@@ -32,6 +32,8 @@ alias tm="tmux \; \
   \;"
 
 alias tppc="tmux \; \
+  new-session -s files -c ~/ \; \
+  send-keys 'y' C-m \; \
   new-session -s ppc -c ~/Developer/ppc \; \
   send-keys 'sudo minikube tunnel' C-m \; \
   split-window -v \; \
@@ -53,5 +55,5 @@ alias tppc="tmux \; \
   resize-pane -y 16 -t 1 \; \
   resize-pane -y 10 -t 2 \; \
   resize-pane -y 10 -t 3 \; \
-  resize-pane -y 39 -t 4
+  resize-pane -y 39 -t 4 \; \
   \;"
