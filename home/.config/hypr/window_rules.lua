@@ -86,7 +86,7 @@ hl.window_rule({
 
 hl.window_rule({
   name = "speedcrunch",
-  match = { class = "^(org.speedcrunch.speedcrunch)$" },
+  match = { class = "^(org.speedcrunch.SpeedCrunch)$" },
   workspace = "special:magic",
   float = true,
   move = "2292 720",

@@ -12,6 +12,11 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar")
   hl.exec_cmd("mako") -- For notifications.
 
+  hl.exec_cmd("brave", { workspace = 1 })
+  hl.exec_cmd("ghostty -e zsh -lic 'tm'", { workspace = "2 silent" })
+  hl.exec_cmd("speedcrunch", { workspace = "special:magic silent" })
+  hl.exec_cmd("~/.joplin/Joplin.AppImage", { workspace = "special:magic silent" })
+
   -- Dark mode.
   hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita-dark\"") -- For GTK3 apps.
   hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"") -- For GTK4 apps.
@@ -67,6 +72,8 @@ hl.config({
   },
   dwindle = {
     preserve_split = true,
+    default_split_ratio = 1.333333,
+    force_split = 2
   },
   master = {
     new_status = "master",
