@@ -30,6 +30,11 @@ hl.device({
 })
 
 hl.device({
+  name = "nuphy-node-75-lp-dongle",
+  kb_layout = "us",
+})
+
+hl.device({
   name = "nuphy-node-75-lp-dongle-1",
   kb_layout = "us",
 })
